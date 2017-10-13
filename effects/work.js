@@ -799,7 +799,7 @@
 						showArticles(data,menuItem,page);
 					},
 					error:function(e){
-						articles.html($("<h2>此目录下数据为空或者请求数据失败</h2>"));
+						articles.html($("<h2>此目录下数据为空或者请求数据失败或者是服务器未连接</h2>"));
 					}
 				})
 			}
@@ -879,6 +879,7 @@
 
 
 /*jsonp跨域异步请求数据开始*/
+(function(){
    var team=$("#selectTeam");
    var city=$("#city");
    var search=$("#search");
@@ -963,7 +964,7 @@
 								}
 	   						},
 	   						error:function(e){
-	   							console.log('本地数据请求失败');
+	   							message.html('<p>本地数据请求失败，可能是服务器链接问题</p>');
 	   							// console.log(e.responseText);
 	   						}
 	   						
@@ -1025,12 +1026,13 @@
 			}
 		}
 	 }
+})();
 
-
-/*jsonp跨域异步请求数据结束*/autoInfoInput
+/*jsonp跨域异步请求数据结束*/
 
 
 /*输入文字提示选项异步加载开始*/
+(function(){
 	var autoInfoInput=$("#autoInfoInput");
 	var autoInfoList=$("#autoInfoList");
 	var autoInfoMessage=$("#autoInfoMessage");
@@ -1060,7 +1062,9 @@
 				}
 			},
 			error:function(e){
-				console.log('获得关键字失败了');
+				var h3Item=$("<h3></h3>");
+				h3Item.html('获得关键字失败了或者未接连服务器');
+				autoInfoList.append(h3Item);
 			}
 		})	
 	});
@@ -1077,7 +1081,18 @@
 	//点击百度一下
 	autoInfoSearch.on("click",function(){
 		inputValue=autoInfoInput.val();
-		searchInfo(inputValue);
+		
+		if(inputValue.lenght>0){
+			console.log(inputValue+'dsdfs')
+			searchInfo(inputValue);
+		}else{
+			console.log(inputValue+'dsdfs333')
+			var h3Item=$("<p></p>");
+				h3Item.html('获得关键字失败了或者未接连服务器');
+				autoInfoMessage.append(h3Item);
+		}
+		
+
 		
 	})
 	//函数，查询，比如点击提示选项或者搜索一下
@@ -1107,15 +1122,17 @@
 				}
 			},
 			error:function(e){
-				console.log('百度一下查询关键字失败了');
+				var h2Item=$("<h2></h2>");
+				h2Item.text('百度一下查询关键字失败了或者未连接服务器');
+				autoInfoMessage.append(h2Item);
 			}
 		});
 	}
-
+})();
 /*输入文字提示选项异步加载结束*/
 
 /*拖拽切换效开始*/
-	function dragFun(){
+(function(){
 		var liWidth=245;
 		var liHeight=180;
 		var distance=15;
@@ -1240,8 +1257,7 @@
 		
 		}
 
-	};
-	dragFun();
+})();
 /*拖拽切换效结束*/
 
 
