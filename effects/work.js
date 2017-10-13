@@ -1,6 +1,7 @@
  window.onload=function(){
 
 	/*轮播图1开始*/
+(function(){
 	var imgBox=document.getElementById("imgBox");
 	var liOne=imgBox.children[0].children[0];//第一个li
 	var ul=imgBox.children[0];
@@ -95,10 +96,12 @@
 		}, speed*3);
 		
 	}
+})();
 
 	/*轮播图结束*/
 
 	/*3D轮播图开始*/
+(function(){
 	// 参数定义
 	var arr=["800-600-01.jpg","800-600-02.jpg","800-600-03.jpg","800-600-04.jpg","800-600-05.jpg",]//图片名称数组
 	var imgBox2=document.getElementById("imgBox2");//大盒子
@@ -192,9 +195,7 @@
 		if(i==0){
 			spans[i].onclick=function(){
 				position.unshift(position.pop(position[0]));
-				
 				 Img.move(position);
-				console.log(position)
 			}
 		}else if(i==1){
 			spans[i].onclick=function(){
@@ -211,13 +212,16 @@
 	timer3d=setInterval(threedPlay, 2000);
 	function threedPlay(){
 		position.unshift(position.pop(position[0]));
+		console.log(position)
 		Img.move(position);
 	}
+})();
 	// // 3D轮播图结束
 
 
 
 	/*贪吃蛇部分开始*/
+(function(){
 	var snakeDiv=document.getElementById("snake");
 	var iniBody=[[5,10,"red",null],[5,9,"yellow",null],[5,8,"yellow",null]];
 	//蛇类
@@ -404,10 +408,11 @@
 			lastKey=keyIni;
 			flag=1;
 		}
-		// autoPlayTimer(flag);
+		autoPlayTimer(flag);
 		autoPlayTimer(0);
 		
 	}
+})();
 	/*贪吃蛇部分结束*/
 
 
@@ -415,6 +420,7 @@
 
 
 	/*打气球开始*/
+(function(){
 	//原生JS完成
 	var balloonBox=document.getElementById("balloonBox");
 	var balloonBoxW=balloonBox.offsetWidth;//盒子宽度
@@ -448,12 +454,6 @@
 	function move(){
 		for (var i = 0; i < balloons.length; i++) {
 			var tmpTop=balloons[i].offsetTop-balloons[i].speed;
-			// var tmpLeft=balloons[i].offsetLeft-balloons[i].speed;
-			// balloons[i].style.top=balloons[i].offsetTop-balloons[i].speed+'px';
-/*			balloons[i].style.top=(tmpTop<0?top:tmpTop)+'px';//上升到顶部重新回到起点
-			var left=Math.floor(Math.random()*(balloonBoxW-balloonW));
-			left=Math.max(0,left);
-			balloons[i].style.left=(tmpTop<0?left:balloons[i].offsetLeft)+'px';*/
 			if (tmpTop<0) {
 				balloons[i].style.top=top+'px';
 				var left=Math.floor(Math.random()*(balloonBoxW-balloonW));
@@ -476,13 +476,14 @@
 		balloonBox.attachEvent("onclick",balloonBoxClickFunction,false);
 	}else{
 		console.log('1119');
-		balloonBox.addEventListener("onclick",balloonBoxClickFunction,false)
+		balloonBox.addEventListener("click",balloonBoxClickFunction,false)
 	}
-	function balloonBoxClickFunction(){
+	function balloonBoxClickFunction(event){
+		var event=event||window.event;
 		if(!timeStart){
 			timeStart=new Date().getTime();//取时间戳
 		}
-		var target=e.target;
+		var target=event.target;
 		if(target.className.toLowerCase()==="balloon"){
 			target.speed++;
 			target.speed=target.speed>10?10:target.speed;
@@ -509,18 +510,16 @@
 
 	}
 		
-
-
+})();
 
 	/*打气球结束*/
 
 
 
 
-
-
 	/*楼层导航和去顶部开始*/
 
+(function(){
 	//楼层
 	var floorItem=$(".w");
 	var floorNav=$("<div class='floorNav'></div>");
@@ -592,10 +591,12 @@
 		console.log('all');
 		addDiv.style.display="none";
 	})
+})();
 	/*	重复弹窗广告结束*/
 
 
 	/* 动态加载图片开始 */
+(function(){
 	var photoId=$("#photo");
 	var photoNum=3;//暂时关闭，默认为5
 
@@ -622,9 +623,11 @@
 
 		}
 	})
+})();
 	/* 动态加载图片结束 */
 
 	/*放大镜效果开始*/
+(function(){
 	var zoomBox=$("#zoom");//大盒子
 	var smallPhotoLocation="imgs/photosmall.jpg";//小图地址
 	var bigPhotoLocation="imgs/photobig.jpg";//大图地址
@@ -683,24 +686,27 @@
 			top: top1+'px'
 		});
 	});
+})();
 	/*放大镜效果结束*/
 
 
 
 	 /*商品布局开始*/
-	 var layoutBox=$("#layoutBox");
-	 var lis=layoutBox.find("li");
-	 // console.log(lis);
-	 lis.each(function(){
-	 	// console.log(this);
-	 	$(this).on("mouseover",function(){
-	 		$(this).find("img").stop().animate({left:"-20px"},500);
-	 	})
-	 	$(this).on("mouseout",function(){
-	 		$(this).find("img").stop().animate({left:"0px"},500);
-	 	})
-	 	
-	 })
+	 (function(){
+		 var layoutBox=$("#layoutBox");
+		 var lis=layoutBox.find("li");
+		 // console.log(lis);
+		 lis.each(function(){
+		 	// console.log(this);
+		 	$(this).on("mouseover",function(){
+		 		$(this).find("img").stop().animate({left:"-20px"},500);
+		 	})
+		 	$(this).on("mouseout",function(){
+		 		$(this).find("img").stop().animate({left:"0px"},500);
+		 	})
+		 	
+		 })
+	})();
 	/*商品布局结束*/	
 
 /*3D动画 开始*/
@@ -714,159 +720,161 @@
 
 
 /*ajax异步请求 开始*/
-	// 获取菜单
-	var menu=$("#menuBox");
-	$.ajax({
-		url: 'menu.php',
-		type: 'get',
-		dataType: 'json',
-		data: {menu: 'menu1'},
-		success:function(data){
-			var str='<ul>'
-			for (var i in data) {
-				str+="<li>"+i+"<span><i>◇</i></span><ul>";
-				for (var j in data[i]) {
-					str+="<li>"+j+"<e><m>◇</m></e><ul>";
-					for (var k in data[i][j]) {
-						str+="<li class='itemMenu'>"+data[i][j][k]+"</li>";
+	(function(){
+			// 获取菜单
+		var menu=$("#menuBox");
+		$.ajax({
+			url: 'menu.php',
+			type: 'get',
+			dataType: 'json',
+			data: {menu: 'menu1'},
+			success:function(data){
+				var str='<ul>'
+				for (var i in data) {
+					str+="<li>"+i+"<span><i>◇</i></span><ul>";
+					for (var j in data[i]) {
+						str+="<li>"+j+"<e><m>◇</m></e><ul>";
+						for (var k in data[i][j]) {
+							str+="<li class='itemMenu'>"+data[i][j][k]+"</li>";
+						}
+						str+="</ul></li>";
 					}
 					str+="</ul></li>";
 				}
-				str+="</ul></li>";
-			}
-			str+='</ul>';
-			menu.append($(str));
-		},
-		error:function(e){
-			console.log("获取菜单信息出错啦");
-		}
-	});
-
-	//菜单操作选择文章 
-	var page=1;
-	var articles=$("#articles");
-	var menuItem="三级菜单111";
-	var itemDes=null;
-	var datas=[];
-	menu.on("click",'.itemMenu',function(){
-		menuItem=$(this).text();
-		page=1;
-		getArticles(menuItem,page,itemDes);
-		// console.log(menuItem);
-	});
-	//初始化
-	getArticles(menuItem,page,itemDes);
-	
-	//函数文章函数，目录项和page参数
-	function getArticles(menuItem,page,itemDes){
-		// console.log(datas);
-		// 标记，0代表没有缓存数据，1是有缓存数据
-		var flag=0;
-		for (var i = 0; i < datas.length; i++) {
-			if(datas[i].menuItem==menuItem&&datas[i].page==page){
-				showArticles(datas[i],menuItem,page);//有缓存数据的时候直接调用缓存
-				flag=1;
-			}
-			// return;
-		}
-		//没有缓存数据就发起ajax请求
-		if(flag==0){
-			$.ajax({
-				url:"articles.php",
-				type:"get",
-				dataType:"json",
-				data:{
-					menuItem:menuItem,
-					page:page,
-					itemDes:itemDes
-				},
-				success:function(data){
-					// 保存数据到缓存数组里，同样要保存这些标识
-					data.menuItem=menuItem;
-					data.page=page;
-					datas.push(data);
-
-	/*				for(var i in data){
-						var h2=$("<h2 class='titleArt'>"+i+"</h2>");
-						articles.append(h2);
-					}*/
-					showArticles(data,menuItem,page);
-				},
-				error:function(e){
-					articles.html($("<h2>此目录下数据为空或者请求数据失败</h2>"));
-				}
-			})
-		}
-		
-	}
-
-	// 显示文章标题  传入参数分别是  文章数据  菜单标识 页数标记
-	function showArticles(data,menuItem,page){
-		//先清空原来的数据
-		articles.html("");
-		for(var i in data){
-			//缓存数据的标识部分不需要输出
-			if(data[i]==menuItem||[i]==page){
-				return;
-			}
-			var h2=$("<h2 class='titleArt'>"+i+"</h2>");
-			articles.append(h2);
-		}
-	}
-
-	//上下页
-	var pre=$(".pre");
-	var next=$(".next");
-	pre.on("click",function(){
-		page-=1;
-		page=page<1?1:page;
-		getArticles(menuItem,page,itemDes);
-	});
-	next.on("click",function(){
-		page+=1;
-		//这里有个BUG，就是总共有多少页上限不能判断，比如说共3页，
-		//这里点一下加1加到6了，后面点到第三页，要点4下，因为服务器的页数3传不过来
-		page=page>3?3:page;
-		getArticles(menuItem,page,itemDes);
-	})
-
-	//点击标题出来详情操作
-	$("#articles").on("click","h2.titleArt",function(){
-		var that=$(this);
-		var title=$(this).text();
-
-		//隐藏兄弟元素h2的子元素p
-		var brother=$(this).siblings('h2');
-		for (var i = 0; i < brother.length; i++) {
-			$(brother[i]).children('p').addClass('notactive');
-		}
-
-		//当前点击元素的p元素操作
-		var p=$(this).children("p");
-		if(p.length>0){
-			if(p.toggleClass('notactive'));
-		}else{
-			$.ajax({
-			url: 'articles.php',
-			type: 'get',
-			dataType:"html",
-			data: {itemDes: title,
-					menuItem:menuItem,
-					page:page
-			},
-			success:function(data){
-				// console.log(eval("("+data+")"));
-				var p=$("<p class='artDetails'></p>");
-				that.append(p);
-				p.html(data);
+				str+='</ul>';
+				menu.append($(str));
 			},
 			error:function(e){
-				// console.log('获取文章详情失败');
-				console.log(e.responseText);
+				console.log("获取菜单信息出错啦，可能是服务器链接问题");
 			}
-			})
+		});
+		//菜单操作选择文章 
+		var page=1;
+		var articles=$("#articles");
+		var menuItem="三级菜单111";
+		var itemDes=null;
+		var datas=[];
+		menu.on("click",'.itemMenu',function(){
+			menuItem=$(this).text();
+			page=1;
+			getArticles(menuItem,page,itemDes);
+			// console.log(menuItem);
+		});
+		//初始化
+		getArticles(menuItem,page,itemDes);
+		
+		//函数文章函数，目录项和page参数
+		function getArticles(menuItem,page,itemDes){
+			// console.log(datas);
+			// 标记，0代表没有缓存数据，1是有缓存数据
+			var flag=0;
+			for (var i = 0; i < datas.length; i++) {
+				if(datas[i].menuItem==menuItem&&datas[i].page==page){
+					showArticles(datas[i],menuItem,page);//有缓存数据的时候直接调用缓存
+					flag=1;
+				}
+				// return;
+			}
+			//没有缓存数据就发起ajax请求
+			if(flag==0){
+				$.ajax({
+					url:"articles.php",
+					type:"get",
+					dataType:"json",
+					data:{
+						menuItem:menuItem,
+						page:page,
+						itemDes:itemDes
+					},
+					success:function(data){
+						// 保存数据到缓存数组里，同样要保存这些标识
+						data.menuItem=menuItem;
+						data.page=page;
+						datas.push(data);
+
+		/*				for(var i in data){
+							var h2=$("<h2 class='titleArt'>"+i+"</h2>");
+							articles.append(h2);
+						}*/
+						showArticles(data,menuItem,page);
+					},
+					error:function(e){
+						articles.html($("<h2>此目录下数据为空或者请求数据失败</h2>"));
+					}
+				})
+			}
+			
 		}
-	})
+
+		// 显示文章标题  传入参数分别是  文章数据  菜单标识 页数标记
+		function showArticles(data,menuItem,page){
+			//先清空原来的数据
+			articles.html("");
+			for(var i in data){
+				//缓存数据的标识部分不需要输出
+				if(data[i]==menuItem||[i]==page){
+					return;
+				}
+				var h2=$("<h2 class='titleArt'>"+i+"</h2>");
+				articles.append(h2);
+			}
+		}
+
+		//上下页
+		var pre=$(".pre");
+		var next=$(".next");
+		pre.on("click",function(){
+			page-=1;
+			page=page<1?1:page;
+			getArticles(menuItem,page,itemDes);
+		});
+		next.on("click",function(){
+			page+=1;
+			//这里有个BUG，就是总共有多少页上限不能判断，比如说共3页，
+			//这里点一下加1加到6了，后面点到第三页，要点4下，因为服务器的页数3传不过来
+			page=page>3?3:page;
+			getArticles(menuItem,page,itemDes);
+		})
+
+		//点击标题出来详情操作
+		$("#articles").on("click","h2.titleArt",function(){
+			var that=$(this);
+			var title=$(this).text();
+
+			//隐藏兄弟元素h2的子元素p
+			var brother=$(this).siblings('h2');
+			for (var i = 0; i < brother.length; i++) {
+				$(brother[i]).children('p').addClass('notactive');
+			}
+
+			//当前点击元素的p元素操作
+			var p=$(this).children("p");
+			if(p.length>0){
+				if(p.toggleClass('notactive'));
+			}else{
+				$.ajax({
+				url: 'articles.php',
+				type: 'get',
+				dataType:"html",
+				data: {itemDes: title,
+						menuItem:menuItem,
+						page:page
+				},
+				success:function(data){
+					// console.log(eval("("+data+")"));
+					var p=$("<p class='artDetails'></p>");
+					that.append(p);
+					p.html(data);
+				},
+				error:function(e){
+					// console.log('获取文章详情失败');
+					console.log(e.responseText);
+				}
+				})
+			}
+		})
+	})();
+
 /*ajax异步请求结束 结束*/
 
 
@@ -1235,14 +1243,7 @@
 	};
 	dragFun();
 /*拖拽切换效结束*/
-(function(){
-	var a=function(){
-		var aaa="ccc";
-		console.log(aaa);
-		return {str:aaa}
-	}()
-	console.log(a)
-})()
+
 
 
 

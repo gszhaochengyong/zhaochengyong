@@ -64,6 +64,7 @@ function client(){
 
 //动画函数 参数分别是 运动对象  属性jason对象  步长大小  回调函数
 function animate(item,attr,step,fn){
+	console.log(step);
     if(item.timer){clearInterval(item.timer);}
     item.timer=setInterval(function(){
       var flag=true;
@@ -91,7 +92,8 @@ function animate(item,attr,step,fn){
         }else if(i=="zIndex"){
           item.style.zIndex=attr[i];
         }else{
-           item.style.i=moving+current+'px' ;
+        	// console.log(item.style.i);
+           item.style[i]=moving+current+'px' ;
         }
         if(current!=attr[i]){
           flag=false;
