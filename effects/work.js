@@ -472,8 +472,10 @@
 	//点击事件
 	var timeStart;//消耗时间变量
 	if(balloonBox.attachEvent){//ie8以下
+		console.log('1118以下');
 		balloonBox.attachEvent("onclick",balloonBoxClickFunction,false);
 	}else{
+		console.log('1119');
 		balloonBox.addEventListener("onclick",balloonBoxClickFunction,false)
 	}
 	function balloonBoxClickFunction(){
