@@ -408,7 +408,7 @@
 			flag=1;
 		}
 		autoPlayTimer(flag);
-		autoPlayTimer(0);
+		// autoPlayTimer(0);
 		
 	}
 })();

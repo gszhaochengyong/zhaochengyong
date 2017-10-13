@@ -388,6 +388,9 @@ s,i,em{
      width: 760px;
      height: 44px;
      overflow: hidden;
+    position: absolute;
+    left: 210px;
+    top: 0;
 }
 .jd-nav .list ul li{
 

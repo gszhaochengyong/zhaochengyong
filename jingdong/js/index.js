@@ -1,13 +1,11 @@
 window.onload=function(){
-	function $(id){
-		return document.getElementById(id);
-	}
 	//点击顶部banner右上角的X关闭banner显示
 	// 事件三要素  事件原.事件=事件处理程序
 	var topbanner=document.getElementById('topbanner');
 	var aclose=document.getElementById('a-close');
 	aclose.onclick=function () {
-		 topbanner.style.display='none';
+		$(topbanner).slideUp(200,"linear");
+		 // topbanner.style.display='none';
 		// topbanner.style.css('display', 'none'); 这个为啥不行
 	}
 
@@ -17,44 +15,29 @@ window.onload=function(){
 	var loginmask=document.getElementById('loginmask');
 	var closelogin=document.getElementById('closelogin');
 	logina.onclick=function(){
-		loginpop.style.display="block";
-		maskpop.style.display="block";
+		$(loginpop).show(10);
+		$(maskpop).show(30);
 	}
 	closelogin.onclick=function(){
 		loginpop.style.display="none";
 		maskpop.style.display="none";
 	}
 
-/*	//搜索输入框处理
-	//鼠标进入焦点时当为默认值时清空并变颜色
-	var searchInput=document.getElementById('searchInput');
-	searchInput.onfocus=function(){
-		if(searchInput.value=='请输入'){
-			searchInput.value='';
-			searchInput.style.color="#666";
-		}
-	}
-	//鼠标移出焦点时当为空时给默认值，并设置默认颜色
-	searchInput.onblur=function(){
-		if(searchInput.value==''){
-			searchInput.value='请输入';
-			searchInput.style.color="#aaa";
-		}
-	}*/
+
    //搜索输入框处理2仿淘宝的效果
-   $("searchInput").focus();
-   $("searchInput").oninput=$("searchInput").onpropertychange=function(){
-   	 if (this.value=='') {
-   	 	$("d11").style.display="block";
+   $("#searchInput").focus();
+   $("#searchInput").on("input propertychange",function(){
+   	  console.log("ddd");
+   	 if ($(this).val()=='') {
+   	 	$("#d11").css("display","block");
    	 } else {
-   	 	$("d11").style.display="none";
+   	 	$("#d11").css("display","none")
    	 }
    	 
-   }
+   });
 
 	//遍历循环for来布置生活服务众多小标签背景图片
 	var icons=document.getElementsByClassName('icon');
-	//console.log(icons.length);
 	for(var i = 0, length1 = icons.length; i < length1; i++){
 		icons[i].style.background="url(imgs/icon_lifeserv.png) no-repeat -25px "+(-25)*i+"px";
 		//console.log("125px "+(-25)*i+"px");
