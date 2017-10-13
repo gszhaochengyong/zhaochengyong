@@ -212,7 +212,6 @@
 	timer3d=setInterval(threedPlay, 2000);
 	function threedPlay(){
 		position.unshift(position.pop(position[0]));
-		console.log(position)
 		Img.move(position);
 	}
 })();
@@ -475,7 +474,6 @@
 		console.log('1118以下');
 		balloonBox.attachEvent("onclick",balloonBoxClickFunction,false);
 	}else{
-		console.log('1119');
 		balloonBox.addEventListener("click",balloonBoxClickFunction,false)
 	}
 	function balloonBoxClickFunction(event){
