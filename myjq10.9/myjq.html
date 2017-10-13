@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品</title>
+	<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+	}
+	.divBox{
+		width: 1120px;
+		height: 600px;
+		margin:20px auto;
+		background: #f2f2f2;
+		overflow: hidden;
+	}
+	.div1 .product{
+		width: 300px;
+		height: 300px;
+		background: #f0f0f0;
+		float: left;
+	}
+	.cart .item{
+		float: left;
+	}
+	#ulBox{
+		width: 220px;
+		height: 220px;
+		overflow: hidden;
+		position: relative;
+	}
+	#ulBox ul{
+		width: 500%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	#ulBox ul li{
+		width: 220px;
+		height: 220px;
+		float: left;
+		padding: 0;
+	}
+	#ulBox  #num{
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+	}
+	#ulBox  #num span{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 10px solid #ccc;
+		cursor: pointer;
+	}
+	#ulBox  #num span.active{
+		background: red;
+		color: red;
+	}
+	#ulBox  #page{
+		width: 100%;
+		height: 10px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+	}
+	#ulBox  #page span{
+		display: inline-block;
+		position: absolute;
+		top:0;
+		cursor: pointer;
+
+	}
+	#ulBox  #page span.pre{
+		/*float: left;*/
+		left: 0;
+	}
+	#ulBox  #page span.next{
+		/*float: right;*/
+		right: 0;
+	}
+	</style>
+	<!-- <script type="text/javascript" src="jquery-3.2.1.js"></script> -->
+	<script type="text/javascript" src="myjq.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+	<div class="divBox div1" id="divBox1">
+		<div class="div div2" id="div1">
+			<input type="text" id="input1">
+		</div>
+		<div class="div" id="div2">
+			<input type="text" id="input1">
+		</div>
+	</div>
+	<div>2
+		<a href="http://www.baidu.com" class="a" id="a">###</a>
+	</div>
+	<div id="ulBox">
+		<ul id="ul">
+			<li><img src="equiphot02.jpg" alt=""></li>
+			<li><img src="equiphot01.jpg" alt=""></li>
+			<li><img src="equiphot02.jpg" alt=""></li>
+		</ul>
+		<div id="num"></div>
+		<div id="page"><span class="pre">	<</span><span class="next">></span></div>
+	</div>
+		<div id="ulBox2">
+		<ul id="ul2">
+			<li><img src="equiphot02.jpg" alt=""></li>
+			<li><img src="equiphot01.jpg" alt=""></li>
+			<li><img src="equiphot02.jpg" alt=""></li>
+		</ul>
+		<div id="num2"></div>
+		<div id="page2"><span class="pre">	<</span><span class="next">></span></div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+var menuData={"菜单一":["菜单11","菜单12","菜单13"],"菜单二":["菜单21","菜单22","菜单23"],"菜单三":[],"菜单四":["菜单41","菜单42","菜单43"]};
+(function(){
+	/*jq(".div").each(function(i,dom){
+		dom.innerHTML="6666";
+	});*/
+	//console.log(jq().menu(menuData));
+	// console.log(jq(".div").eq(1));
+	//var index1=jq(jq(".div").eq(1));
+	//console.log(index1);
+	 //index1.innerHTML="444";//还没实现返回的是jq对象，不能直接调用html()方法
+	// var jq33=jq("#div1");
+	// var jq3322=jq(jq33);
+	// console.log(toString.call("#div1"));
+	// console.log(toString.call(jq33));
+/*	console.log(" i nput ");
+	console.log(jq().trim("i nput "));*/
+	//console.log(jq("#div1"));
+/*	jq("#div1").on("click",function(){
+		this.style.background="red";
+	})*/
+/*	console.log(jq("#a"));
+	jq("#a").on("click",function(e){
+		console.log(this);
+		// this.preventDefault(e);这里不能用，和上面一样，返回的不是jq对象
+		jq("#a").preventDefault(e);
+	});*/
+	// console.log(jq("#div2").removeClass("div"));
+	//console.log(jq("#div2").tab("div2"));
+/*111	jq("#div2").animate({"width":"200","height":"300"},function (argument) {
+		console.log(argument); 有问题，要调试好。
+	// })*/
+/*
+	 jq().animates({"opacity":60,"width":"500","height":"500"},"ulBox",6000,function(){
+	 	console.log('动画完成了');
+	 });*/
+	// console.log(jq().lE("#ulBox #ul"));
+	//console.log(jq().gE("#ulBox,#ul"));
+	//console.log(jq().lgE("#ulBox,#ul li"));
+	console.log(jq("#ul"));
+	console.log(jq().delelteEepeat([3,55,3,54,7]));
+	console.log(jq().huiwenCheck("adsda"));
+	console.log(jq().scroll())
+
+
+
+
+
+
+
+
+})()
+</script>
+
+<script>
+
+</script>
