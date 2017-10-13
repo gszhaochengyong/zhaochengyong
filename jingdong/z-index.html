@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>京东（JD.COM）--国内流行购物平台</title>
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<style type="text/css">
+	.te{
+		width: 100px;
+		height: 100px;
+	}
+	/*权重是20  行内1000 id 100  class 10 元素1*/
+	.f .te{  
+
+		background: yellow;
+	}
+	/*权重100*/
+	#te{
+		background: red;
+	}
+	/*这种方式是全部弄成相对定位然后层级都是0，然后hover的对象要设置z-index为1*/
+
+
+	.test{
+	margin-top: 100px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ccc;
+	float: left;
+	position: relative;
+	margin-left: -1px;
+}
+.test:hover{
+	border: 1px solid red;
+	z-index: 1;
+} 
+/*这种方式是不设置相对定位，然后hover的对象要设置相对定位，因为相对定位层级要高*/
+/* 	.test{
+	margin-top: 100px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ccc;
+	float: left;
+	margin-left: -1PX;
+}
+.test:hover{
+	border: 1px solid red;
+	position: relative;
+} */
+	</style>
+</head>
+<body>
+<div class="f" >
+	<div class="te" id="te"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+</div>
+
+
+</body>
+</html>

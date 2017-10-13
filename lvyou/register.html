@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>手访同程旅游网</title>
+	<meta charset="utf-8"><!-- 编码集 -->
+	<meta name="keywords" content="同程旅游"> <!-- 搜索关键字 -->
+	<meta name="description" content="同城旅游异地旅游首选同程旅游"><!-- 关键字下面的描述 -->
+	<script type="text/javascript" src="js/ini.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	
+	window.onload=function(){
+		/*//js代码先尝试
+		var form=document.getElementById('form');
+		var name=document.getElementById('username');	
+		var name1=document.getElementsByClassName('username');	
+		var email=document.getElementsByClassName('email');
+		var password=document.getElementsByClassName('password');
+		var repassword=document.getElementsByClassName('repassword');
+		var agree=document.getElementsByClassName('agree');
+		//alert(agree[0].checked);
+		form.onsubmit=function(){
+			//alert(name1[0].value);	//alert(name.value);	
+			if(name.value==''){
+				alert('用户名不能为空');
+				return;
+			}else if(name.value.length<3  || name.value.length>8 ){
+				alert('用户名长度在3到8之间');
+				return;
+			}
+			if(email[0].value==''){
+				alert('Email不能为空');
+				return;
+			}
+			if(password[0].value==''){
+				alert('密码不能为空');
+				return;
+			}else if(password[0].value.length<3  || password[0].value.length>6 ){
+				alert('密码长度在3到6之间');
+				return;
+			}
+			if(repassword[0].value==''){
+				alert('重复密码不能为空');
+				return;
+			}else if(repassword[0].value.length<3  || repassword[0].value.length>6 ){
+				alert('重复密码长度在3到6之间');
+				return;
+			}
+			if(repassword[0].value!=password[0].value){
+				alert('二次密码需要一致');
+				return;
+			}
+			if(agree[0].checked==false){
+				alert('请勾选同意协议');
+				return;
+			}
+			alert('原生表单js验证成功');
+		}*/
+
+
+	}
+
+	//jquery代码优化简化 
+	$(function(){
+		//console.log('测试')
+		var marks=$('form label.mark');
+		var inputs=$('form input');
+
+		marks.each(function(index, el) {
+			var info;
+			if(index==0){
+					$(inputs[index]).blur(function(event) {
+						var length=event.target.value.length;
+						if (length==0) {
+							info='用户名不能为空';
+
+						} else if(length>=3&&length<=8){
+							info ='正确';
+						}else{
+							info='用户名长度在3到8之间';
+						}
+						$(marks[index]).html(info);
+					});
+			}else if (index==1) {
+				$(inputs[index]).blur(function(event) {
+					var length=event.target.value.length;
+					if (length==0) {
+						info='Email不能为空';
+
+					}else{  //应该还要加入正规表达式判断格式
+						info='正确';
+					}
+					$(marks[index]).html(info);
+				});	
+			
+			}else if (index==2) {
+				$(inputs[index]).blur(function(event) {
+					var length=event.target.value.length;
+					if (length==0) {
+						info='密码不能为空';
+
+					} else if(length>=3&&length<=6){
+						info ='正确';
+					}else{
+						info='密码长度在3到6之间';
+					}
+					$(marks[index]).html(info);
+				});	
+			
+			}else if (index==3) {
+				$(inputs[index]).blur(function(event) {
+					var length=event.target.value.length;
+					if (length==0) {
+						info='重复密码不能为空';
+
+					} else if(length>=3&&length<=6){
+						info ='正确';
+					}else{
+						info='重复长度在3到6之间';
+					}
+					$(marks[index]).html(info);
+				});	
+			
+			}else if (index==4) {
+				$(inputs[index]).click(function(event) {
+					console.log(event.target.checked);
+					var checked=event.target.checked;
+					var length=event.target.value.length;
+					if (checked==true) {
+						info='正确';
+
+					}else{
+						info='请勾选同意协议';
+					}
+					$(marks[index]).html(info);
+				});	
+			
+			}
+			
+		});
+
+		//如果有不满足要求的就把焦点移上去，貌似有问题，后面有时间再看看
+	/*	$('form input.submit').click(function(event) {
+			//alert('用户名长度在3到8之间');
+			marks.each(function(index, el) {
+				console.log(marks[index]);
+				if($(marks[index]).html()!='正确'){
+					$(inputs[index]).focus();
+					return false;
+				}else{
+					return;
+				}
+			});
+			
+		});*/
+/*		
+		//这种方法会出现主线中同步的XMLHttpRequest已不推荐使用
+		$('form input.submit').click(function(event) {
+			var form=document.getElementById('form');
+			var ajax = new XMLHttpRequest();
+			ajax.onreadystatechange = function() {
+				if (ajax.readyState == 4 && ajax.status == 200) {
+					var response = ajax.responseText;
+				}
+			};
+			ajax.open('get', 'register.php', false);
+			// ajax.setRequestHeader("Content-type", "application/json");
+			ajax.send(form);
+		});*/
+	})
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/ini.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<style type="text/css">                                                                            
+	</style>
+</head>
+<body>
+	<!-- 顶部开始 包括最上面欢迎 同城地址等 -->
+	<div class="header w1190">
+		<div class="top">
+			 <div class="wrap">
+				<div class="left">
+					<ul>
+						<li>你好，欢迎使用LY.com访问同程</li>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="login.html">登录</a></li>
+						<li><a href="register.html">注册</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<ul>
+						<li><a>我的同程<span></span></a><div class="detail">详细情况</div></li>
+						<li><a>我的同程2<span></span></a><div class="detail"></div></li>
+						<li><a>我的同程3<span></span></a><div class="detail">详细情况3</div></li>
+						<li><a>我的同程4<span></span></a><div class="detail">详细情况4</div></li>
+						<li><a>我的同程5<span></span></a><div class="detail">详细情况5</div></li>
+						<li><a>我的同程6<span></span></a><div class="detail">详细情况6</div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="register w1190">
+		<div class="wrap">
+		  <h2>会员注册 <span>注册成功可获得</span><span>1000</span><span>积分</span></h2>
+			<div class="form">
+				<!-- <form method="get" action="register.js">
+
+
+ -->
+				<form id="form" method="get" action="register.php">
+ 					<tr class="tr">
+						<td><label class="label1" >用户名(手机号):</label></td>
+						<td><label><input type="text" name="username" class="username" id="username"></input></label></td>
+						<td><label style="color: red" class="mark">*</label></td>
+					</tr><br>
+					<tr class="tr">
+						<td><label class="label1" >Email:</label></td>
+						<td><label><input type="text" name="email" class="email"></input></label></td>
+						<td><label style="color: red" class="mark">*</label></td>
+					</tr><br>
+					<tr class="tr">
+						<td><label class="label1"  >密码:</label></td>
+						<td><label><input type="text" name="password" class="password"></input></label></td>
+						<td><label  style="color: red" class="mark">*</label></td>
+					</tr><br>
+					<tr class="tr">
+						<td><label class="label1" >重复密码:</label></td>
+						<td><label><input type="text" name="repassword" class="repassword"></input></label></td>
+						<td><label  style="color: red" class="mark">*</label></td>
+					</tr><br>
+					<tr>
+						<td><label class="label1"><input type="checkbox" name="agree" class="agree"></input></label></td>
+						<td><label>同意此网站协议</label></td>
+						<td><label  style="color: red" class="mark">*</label></td>
+					</tr></br>
+					<a href=""><input type="button" class="submit" value="同意并注册"></input></a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer w1190">
+				<div class="right wrap">
+					<dir class="top">
+					<a href=""><h3>关于我们</h3></a><span>--</span>
+					<a href=""><h3>广告合作</h3></a><span>--</span>
+					<a href=""><h3>联系我们</h3></a><span>--</span>
+					<a href=""><h3>免责声明</h3></a><span>--</span>
+					<a href=""><h3>网站地图</h3></a><span>--</span>
+					<a href=""><h3>投诉建议</h3></a><span>--</span>
+					<a href=""><h3>在线投稿</h3></a>
+					</dir>
+					
+					<p>©CopyRight 2006-2016 JB51.Net Inc All Rights Reserved. 脚本之家 版权所有</p>
+				</div>
+				
+	</div>
+
+</body>
+</html>

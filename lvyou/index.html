@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>手访同程旅游网</title>
+	<meta charset="utf-8"><!-- 编码集 -->
+	<meta name="keywords" content="同程旅游"> <!-- 搜索关键字 -->
+	<meta name="description" content="同城旅游异地旅游首选同程旅游"><!-- 关键字下面的描述 -->
+	<script type="text/javascript" src="js/ini.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			/*$('.header .city .citySle').hover(function(event) {
+				//event.preventDefault();
+				$(this).addClass('cityOver');
+			});*/
+			$('.header .city .citySle').on('mouseover',function(event) {
+				//event.preventDefault();
+				$(this).addClass('cityOver');
+			});
+			$('.header .city .citySle').on('mouseout',function(event) {
+				$(this).removeClass('cityOver');
+			});
+
+			// 点击景点导航后添加current类
+			$('.nav .slide .wrap .leftNav ul li').click(function(event){
+				$(this).parent().children('li.current').removeClass('current');
+				$(this).addClass('current');	
+			})
+
+			// 图片幻灯片开始
+			var photoNum=$('.slidePhoto .photo').length;//图片数量
+			var over=0;//0代表自动播放，1代表鼠标指向图片，2代表鼠标指向数字
+			var index=1;//自动播放初始值
+			var onIndex;//鼠标指向初始值
+			$('.slidePhoto .num ul li:eq(0)').addClass('current');
+			function slide(){  //function slide(onIndex){
+							if(over==0){
+								$('.slidePhoto .photo.current,.slidePhoto .num ul li.current').removeClass('current');
+									$('.slidePhoto .photo:eq('+index+'),.slidePhoto .num ul li:eq('+index+')').addClass('current');
+									index++;
+									if (index>=photoNum) {
+										index=0;
+									}
+									//console.log(index);
+									
+							}
+/*							if(over==2){
+								$('.slidePhoto .photo.current,.slidePhoto .num ul li.current').removeClass('current');
+								$('.slidePhoto .photo:eq('+onIndex+'),.slidePhoto .num ul li:eq('+onIndex+')').addClass('current');
+							}*/
+							//console.log(onIndex);
+						}
+			$('.slidePhoto .photo').on('mouseover  mouseout',function(event){
+				if (event.type=='mouseover') {
+					over=1;
+				} else if(event.type='mouseout') {
+					over=0;
+				}else{
+					console.log('鼠标移出移进出幻灯图片出问题了')
+				}
+			});
+
+/*			$('.slidePhoto .num ul li').on('mouseover  click mouseout',function(event){
+				var onIndex=$(this).index();
+				if (event.type=='mouseover'||event.type=='click') {
+					over=2;
+				} else if(event.type='mouseout') {
+					over=1;
+				}else{
+					console.log('鼠标移出移进出幻灯数字出问题了')
+				}
+			});*/
+			setInterval(slide, 1000);
+
+			//幻灯片结束
+			
+			//每日特惠开始
+			$('.wrap .lists ul li').on('mouseenter mouseleave',function(event){
+				var details=event.currentTarget.childNodes[1].childNodes[2];//details div 容器
+				var h2=details.childNodes[1];//h2标题部分
+				if(event.type=='mouseenter'){
+					$(details).finish().css('box-shadow','0 0 3px #ccc').animate({
+				 	opacity:0.8
+				 	},100).animate({
+				 	height: '98px'
+				 	},300).find('h2').finish().animate({
+				 		height:'48px'
+				 	},300);
+				}else if(event.type=='mouseleave'){
+					$(details).finish().css('box-shadow','0 0 0px').animate({
+				 	opacity:1,
+				 	height:'78px'
+				 	},100).find('h2').finish().animate({height: '24px'}, 100);
+				 	// $(h2).animate({
+				 	// height:'24px'
+				 	// },100);
+				}
+			})
+			//图片指向显示二维码
+			$('.wrap .right .photo').hover(function(event) {
+				$(this).children('div.erWei').finish().animate({top: '0px'}, 500);
+			}, function(event) {
+				$(this).children('div.erWei').finish().animate({top: '196px'}, 100);
+			});
+			//每日特惠结束
+			//动态显示图片开始
+
+			
+			function showPhoto(){
+				var lis=$('.dload .wrap .photolists ul li');
+				if(lis.length==$('.photolists ul li.show').length){
+					console.log('图片全都加载完了')
+					return false;
+				}
+				lis.each(function(index, el) {
+					var offset=$(this).offset().top;
+					var load=null;
+					load=($(window).height()+$(window).scrollTop()>offset)?1:0;
+					if (load==1) {
+							var src1=$(this).children('img').attr('src1');
+							$(this).addClass('show');//.delay(2000)
+							$(this).children('img').attr('src',src1);//.delay(2000)
+						} 
+				});  
+				console.log('加载完成 前 这里命名空间要处理下')
+			}
+			showPhoto();
+			$(window).on('scroll.photo resize.photo',showPhoto)
+			//动态显示图片结束
+			//红包开始
+			$('.redp a').click(function(event) {
+				$(this).parent().css('display','none');
+			});
+			//红包结束
+			//
+			//回到顶部开始
+			$('.top').click(function(event) {
+				$(window).scrollTop(0);
+			});
+			function showTop(){
+				console.log('到顶部代码 这里命名空间要处理下');
+				if($(window).scrollTop()>300){
+					$('.top .img').css('display', 'block');
+				}else{
+					$('.top .img').css('display', 'none');
+				}
+			}
+			showTop();
+			$(window).on('scroll.top resize.top',showTop);
+			
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/ini.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<!-- 顶部开始 包括最上面欢迎 同城地址等 -->
+	<div class="header">
+		<div class="top">
+			 <div class="wrap">
+				<div class="left">
+					<ul>
+						<li>你好，欢迎使用LY.com访问同程</li>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="login.html">登录</a></li>
+						<li><a href="register.html">注册</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<ul>
+						<li><a>我的同程<span></span></a><div class="detail">详细情况</div></li>
+						<li><a>我的同程2<span></span></a><div class="detail"></div></li>
+						<li><a>我的同程3<span></span></a><div class="detail">详细情况3</div></li>
+						<li><a>我的同程4<span></span></a><div class="detail">详细情况4</div></li>
+						<li><a>我的同程5<span></span></a><div class="detail">详细情况5</div></li>
+						<li><a>我的同程6<span></span></a><div class="detail">详细情况6</div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="city">
+			<div class="wrap">
+				<div class="logo">
+				</div>
+				<div class="citySle">
+				    	<h1>深圳</h1><span></span>	
+				    	<div class="cityList">城市列表，请选择你所在的城市
+				    	</div>			
+				</div>
+				<div class="phone">
+					
+				</div>
+			</div>	
+		</div>
+		<div class="nav">
+			<div class="top">
+				<div class="wrap">
+					<ul>
+						<li class="index">
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">景点1 <span></span></a>
+							<div class="list wrap"></div>
+						</li>
+						<li>
+							<a href="#">景点2 <span></span></a>
+							<div class="list wrap"></div>
+						</li>
+						<li>
+							<a href="#">景点3 <span></span></a>
+							<div class="list wrap"></div>
+						</li>
+						<li>
+							<a href="#">景点4 </a>
+
+						</li>
+						<li>
+							<a href="#">景点5 <span></span></a>
+							<div class="list wrap"></div>
+						</li>
+						<li>
+							<a href="#">景点6 <span></span></a>
+							<div class="list wrap"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="wrap">
+					<div class="leftNav">
+						<ul>
+							<li class="current"><div class="text"><span></span>景点门票</div><div class="details">111</div></li>
+							<li ><div class="text"><span></span>景点门票2</div><div class="details">2222</div></li>
+							<li><div class="text"><span></span>景点门票3</div><div class="details">33333</div></li>
+						</ul>
+					</div>
+				</div>
+				<div class="slidePhoto">
+					<div class="photo current"><img src="imgs/img1.jpg"></div>
+					<div class="photo"><img src="imgs/img2.jpg"></div>
+					<div class="photo"><img src="imgs/img3.jpg"></div>
+					<div class="photo"><img src="imgs/img4.jpg"></div>
+					<div class="photo"><img src="imgs/img5.jpg"></div>
+					<div class="num">
+						<ul class="numUl">
+							<li >1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+		
+
+	</div>
+	<div class="tehui">
+		<div class="wrap">
+			<div class="title"><span></span><h1>每日特惠</h1></div>
+			<div class="line"></div>
+			<div class="lists">
+				<ul>
+					<li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth1.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth2.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li><li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth3.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li><li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth4.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li><li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth1.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li><li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth1.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li><li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth1.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="#"><div class="img">
+							<img src="imgs/mrth8.jpg">
+						</div>
+						<div class="details">
+							<h2>天目湖君悦假日酒店1晚
+								（含双早80元抵用券）
+							</h2>
+							<div class="position">
+								<div class="text">
+									<div class="left">
+										<span class="unit">￥</span>
+										<span class="price">119</span>
+										<span class="qi">起</span>
+									</div>
+									
+								</div>
+								<div class="class">周边游</div>
+							</div>
+							
+							
+						</div>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="right">
+				<div class="photo"><img src="imgs/right1.jpg">
+					<div class="erWei"><img src="imgs/towCode.png"> </div>
+				</div>
+				<div class="photo"><img src="imgs/right2.jpg">
+					<div class="erWei"><img src="imgs/towCode.png"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dload">
+		<div class="wrap">
+			<div class="title"><span></span><h1>每日特惠</h1></div>
+			<div class="line"></div>
+			<div class="photolists">
+				<ul>
+					<li ><img src1="imgs/mt1.jpg"><p><a href="#">这个妹妹漂亮吗</a></p>
+					<div class="loading">
+						
+					</div></li>
+					<li ><img src1="imgs/mt2.jpg"><p><a>这个妹妹漂亮吗</a></p><div class="loading">
+						
+					</div></li>
+					<li ><img src1="imgs/mt3.jpg"><p><a>这个妹妹漂亮吗</a></p><div class="loading">
+						
+					</div></li>
+					<li ><img src1="imgs/mt4.jpg"><p><a>这个妹妹漂亮吗</a></p><div class="loading">
+						
+					</div></li>
+					<li><img src1="imgs/mt5.jpg"><p><a>这个妹妹漂亮吗</a></p><div class="loading">
+						
+					</div></li>
+					<li><img src1="imgs/mt6.jpg"><p><a>这个妹妹漂亮吗</a></p><div class="loading">
+						
+					</div></li>
+					<li><img src1="imgs/mt7.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt8.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt9.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt10.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt1.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt2.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt3.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt4.jpg"><p><a>这个妹妹漂亮吗</a></p></li>
+					<li><img src1="imgs/mt5.jpg"><p><a>这个妹妹漂亮吗</a></p>
+					<div class="loading">
+						
+					</div></li>
+					<li><img src1="imgs/mt6.jpg"><p><a>这个妹妹漂亮吗</a></p><div class="loading">
+						
+					</div></li>
+				</ul>
+			</div>
+			
+	
+	</div>
+	<div class="redp">
+		<img src="imgs/redd.gif">
+		<a href="javascript:;"></a>
+	</div>
+	<div class="top">
+		<a href="#"  alt='回到顶部' title='回到顶部'><div class="img"></div></a>
+	</div>
+	<div class="clearfloat"></div>
+	<div class="footer">
+				<div class="wrap">
+					<div class="top">
+					<a href=""><h3>关于我们</h3></a><span>--</span>
+					<a href=""><h3>广告合作</h3></a><span>--</span>
+					<a href=""><h3>联系我们</h3></a><span>--</span>
+					<a href=""><h3>免责声明</h3></a><span>--</span>
+					<a href=""><h3>网站地图</h3></a><span>--</span>
+					<a href=""><h3>投诉建议</h3></a><span>--</span>
+					<a href=""><h3>在线投稿</h3></a>
+					</div>
+					
+					<p>©CopyRight 2006-2016 JB51.Net Inc All Rights Reserved. 脚本之家 版权所有</p>
+				</div>
+				
+	</div>
+</body>
+</html>

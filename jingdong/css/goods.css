@@ -1,0 +1,105 @@
+﻿@charset "UTF-8";
+.gooditem{
+	display: none;
+}
+.nav-good{
+	background: #f2f2f2;
+	height: 44px;
+	margin-bottom: 10px;
+}
+.nav-good-w{
+	padding: 13px 0 9px 0;
+}
+.nav-good-w .left{
+	float: left;
+}
+.nav-good-w .right{
+	float: right;
+}
+.nav-good-w .left ul li{
+	width: auto;
+	float: left;
+	padding: 0 8px 0 0;
+}
+.nav-good-w .left ul li.apple i{
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 4px 7px;
+}
+.nav-good-w .left ul li.apple i e{
+	margin-left: 5px;
+	display: inline-block;
+	font-family: Sisum;
+	transform:rotate(90deg);/*旋转角度设置*/
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(270deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+    transition: All 0.2s ease-in-out;/*旋转时间设置*/
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+.nav-good-w .left ul li.apple:hover i e{
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+}
+.nav-good-w .left ul li span{
+	margin-left: 5px;
+	font: 400 13px/13px Sisum;
+}
+.nav-good-w .right{
+	position: relative;
+}
+.nav-good-w .right span{
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+}
+.nav-good-w .right span.jd i{
+	margin:0 2px 0 2px;
+	color: #e4393c;
+	font-weight: bold;
+}
+.nav-good-w .right span.jd{
+	border: 1px solid #e4393c;
+	height: 14px;
+	line-height: 14px;
+}
+.nav-good-w .right span.jd e{
+	padding:0 2px 0 2px;
+	color: #fff;
+	background: #e4393c;
+}
+.nav-good-w .right span.jimi i{
+		float: left;
+	display: inline-block;
+	width: 18px;
+	height:18px;
+	margin-top: -2px;
+	background: url(../imgs/good-icon.png) 0 0 no-repeat;
+}
+
+.nav-good-w .right span.store i{
+	display: inline-block;
+	float: left;
+	width:18px; 
+	margin-top: -2px;
+	height:18px;
+	background: url(../imgs/good-icon.png) -16px -16px no-repeat;
+}
+.nav-good-w .right .jimi{
+	width: 100px;
+	height: 100px;
+	background: yellow;
+	position: absolute;
+	right: 0;
+	top: 30px;
+	display: none;
+}
+.nav-good-w .right:hover .jimi{
+	display: block;
+}

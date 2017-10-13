@@ -1,0 +1,44 @@
+
+.login .wrap{
+	height: 500px;
+	width:600px;
+}
+.login .wrap div.title{
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;
+}
+.login .wrap div.title h2{
+	font-size: 20px;
+	color: #666;
+	font-weight: normal;
+	line-height: 100px;
+	margin-left: 250px;
+}
+.login .wrap div.title h2 span{
+	font-size: 13px;
+	color: #999;
+}
+.login .wrap div.title h2 span a{
+	color: green;
+
+}	
+.login .wrap form{
+	width: 400px;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.login .wrap div.inputs{
+	width: 400px;
+	height: 20px;
+	margin: 20px auto;
+	float: right;
+	text-align: left;
+}
+.login .wrap div.inputs:nth-child(3){
+	text-align: center;
+}
+.login .wrap div.inputs:nth-child(3) input{
+	margin-left: -150px;
+}

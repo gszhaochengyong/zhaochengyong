@@ -1,0 +1,233 @@
+@charset "UTF-8"
+/*全部商品下拉菜单，因为只要主页才有，所有写在这里*/
+.jd-nav .dropmenu{
+	overflow: visible;
+}
+.jd-nav .gooditem{
+	display: block;
+}
+/*全部商品下拉菜单，因为只要主页才有，所有写在这里*/
+
+/*banner背景开始*/
+.banner {
+	background: red;
+	position: relative;
+}
+.banner span{
+	color: blue;
+}
+.banner a{
+	position: absolute;
+	width: 100%;
+	height: 604px;
+	background: url(../imgs/banner.jpg) top center  no-repeat;
+	/*background:red;*/
+	/*color: red;*/
+	/*z-index: -1;*/
+}
+
+/*banner背景结束*/
+
+/*中国主体部分*/
+.main{
+	position: relative;
+}
+.main .slide{
+	position: relative;
+	float: left;
+	width: 730px;
+	height: 454px;
+	margin: 10px 0 0 220px;
+	overflow: hidden;
+}
+.main .slide img{
+	float: left;
+
+}
+.slide .num{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -65px;
+}
+.slide .num li{
+	float: left;
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: #3E3E3e;
+	border-radius: 9px;
+	color: #fff;
+	line-height: 18px;
+	text-align: center;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.slide .num li.now{
+	background: #B61B1F;
+}
+.slide .arr{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -31px;
+	width: 100%;
+	height: 62px;
+}
+.slide .arr a,.double11 .night .right span{
+	display: block;
+	width: 26px;
+	height: 62px;
+	line-height: 62px;
+	background: rgba(0,0,0,0.2);
+	font: 700 22px/62px "宋体";
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+.slide .arr a.pre
+{
+	float: left;
+}
+.slide .arr a.next
+{
+	float: right;
+}
+.slide .arr a:hover,.double11 .night .right span:hover{
+	background: rgba(0,0,0,0.4);
+	/*opacity: 0.4;*/
+}
+.main .news{
+	float: right;
+	width: 248px;
+	height: 452px;
+	border: 1px solid #E4E4E4;
+	margin-top: 10px;
+	margin-right: 2px;
+	overflow: hidden;
+}
+
+.main .news .qnews,.main .news .services{
+	height: 43px;
+	padding-left: 15px;
+	
+	line-height: 43px;
+	border-bottom: 1px dashed #E8E8E7;
+}
+
+.main .news .qnews span,.main .news .services span{
+	float: left;
+	font-size: 15px;
+	font-family: "microsoft yahei";
+}
+.main .news .qnews a{
+	float: right;
+	margin-right: 10px;
+	font: 400 13px/43px "宋体";
+}
+.main .news .thui{
+	padding-top: 6px;
+	padding-left: 15px;
+	border-bottom:1px dotted #ccc;
+}
+.main .news .thui a{
+	width: 100%;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+.main .news .thui a .notes{
+	font: 600 15px/30px "microsoft yahei";
+}
+.main .news .thui a .title{
+	margin-left: 5px;
+	font: 400 14px/30px "microsoft yahei";
+}
+.main .news .items{
+	height: 210px;
+	width: 252px;
+
+}
+.main .news .items a{
+	display: block;
+	width: 62px;
+	height: 69px;
+	float: left;
+	border-right:1px solid #E8E8E7;
+	border-bottom:1px solid #E8E8E7;
+	position: relative;
+}
+.main .news .items a .icon{
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin:12px auto auto auto;
+}
+/* .main .news .items a .icon{
+	background: url(../imgs/icon_lifeserv.png) no-repeat -25px 0;
+}
+.main .news .items a .icon1{
+	background: url(../imgs/icon_lifeserv.png) no-repeat -25px -25px;
+}
+.main .news .items a .icon2{
+	background: url(../imgs/icon_lifeserv.png) no-repeat -25px -50px;
+}
+.main .news .items a .icon3{
+	background: url(../imgs/icon_lifeserv.png) no-repeat -25px -75px;
+} */
+.main .news .items a .text{
+	display: block;
+	margin-top: 5px;
+	text-align: center;
+}
+.main .news .items a.hot{ /*:after*/
+/* 	content: '';
+width: 12px;
+height: 15px;
+background:url(../imgs/song.png);
+position: absolute;
+right: 3px;
+top: 3px; */
+	background: url(../imgs/song.png) right top no-repeat;/*用这一句也能搞定*/
+}
+/*背景图和上部部分结束*/
+/*中间主体部分*/
+
+/*双11开始*/
+.double11{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.double11 .night .left{
+	float: left;
+}
+.double11 .night .right{
+	width: 998px;
+	float: right;
+	overflow: hidden;
+	margin-left: 2px;
+	position: relative;
+}
+.double11 .night .right ul{
+	width: 105%;
+}
+.double11 .night .right ul li {
+	display: block;
+	width: 250px;
+	height: 164px;
+
+	float: left;
+	margin-right: 1px;
+}
+.double11 .night .right span.pre{
+	position: absolute;
+	top: 52px;
+	left: 0px;
+}
+.double11 .night .right span.next{
+	position: absolute;
+	top: 52px;
+	right: 0px;
+}
+/*双11结束*/

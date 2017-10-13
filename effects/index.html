@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="my.js"></script>
+	<script type="text/javascript" src="work.js"></script>
+	<link rel="stylesheet" href="work.css">
+</head>
+<body>
+<div class="main">
+	<div class="w title">
+		<h2>HTML+CSS+JS+JQ+AJAX作品集合</h2>
+	</div>
+
+	<!-- 输入文字提示选项异步加载开始 -->
+	<div class="w slide clearfix autoHeight">
+		<h2>输入提示异步加载</h2>
+		<div class="autoInfoBigBox">
+			<div class="autoInfo fl publicLeft" id="autoInfo">
+				<div class="autoInfoBox" id="autoInfoBox">
+					<span class="info">请输入要查询的内容:</span>
+					<span class="input" id="inputBox">
+						<input id="autoInfoInput">
+						</input>
+						<div class="autoInfo" id="autoInfoList">
+<!-- 							<h3 class="h3">222</h3>
+							<h3 class="h3">222</h3>
+							 -->						
+						</div>
+						<button id="autoInfoSearch">百度一下</button>
+					</span>
+					
+					
+				</div>
+				<div class="autoInfoMessage" id="autoInfoMessage">
+					
+				</div>
+			</div>
+			<div class="txt fl">
+				<h3>输入文字提示选项异步加载（仿百度搜索功能）</h3>
+					<p>1.输入文字会出现关键字提示</p>
+					<p>2.选择提示文字加入到输入框</p>
+					<p>3.点击搜索搜索文字标题和详细说明</p>
+					
+				<h3>原理说明：</h3>
+					<p>1.输入文字鼠标松起时异步请求输入的文字有没有数据，有数据就显示</p>
+					<p>2.点击提示的数据，把值加入到输入框 </p>
+					<p>2.点击百度一直搜索，异步再次请求数据</p>
+				<h3>备注说明：</h3>
+					<p>1.准备数据只有web前端/网页前端 相关，如想看效果，请参考关键字</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 输入文字提示选项异步加载结束 -->
+		<!-- jsonp跨域异步加载开始 -->
+	<div class="w slide clearfix autoHeight">
+		<h2>jsonp跨域异步加载</h2>
+		<div class="NBABigBox">
+			<div class="NBA fl publicLeft" id="NBA">
+				<div class="NBABox" id="NBABox">
+					<span class="nba">请选择你要查询的球队:</span>
+					<select id="selectTeam">
+						<option value="1">凯尔特人</option>
+						<option value="9">公牛</option>
+						<option value="18">火箭</option>
+						<option value="21">马刺</option>
+					</select>
+					<span class="weather">请输入你要查询的城市:</span>
+					<input type="text" id="city" value="深圳">
+					<button id="search">查询天气</button>
+				</div>
+				<div class="message" id="message">
+					<!-- <p>成功学</p><p>成功学</p>
+					<p>sf</p>
+					<p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p><p>sf</p> -->
+				</div>
+			</div>
+			<div class="txt fl">
+				<h3>二级菜单和ajax异步加载数据</h3>
+					<p>1.二级菜单是通过ajax异步请求获得的</p>
+					<p>2.文档列表是通过选择菜单后异步获得的，并且分页也是异步获得的数据</p>
+					<p>3.段落详情是通过选择文章标题异步获得的</p>
+					<p>可以做到在线jsonp跨域请求的，次数用完了，判断了次数用完调用本地数据</p>
+				<h3>原理说明：</h3>
+					<p>1ajax异步加载数据，请求数据</p>
+					<p>2.文章详情请求一次保存在本地dadas中，通过display来显示和隐藏 ，避免重复请求</p>
+					<p>2.分页数据通过参数page和每页要求的数目来获取数据</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- jsonp跨域异步结束 -->
+	<!-- ajax异步请求开始 -->
+	<div class="w slide clearfix autoHeight">
+		<h2>ajax异步加载</h2>
+		<div class="menuBigBox">
+			<div class="menu fl publicLeft" id="menu">
+				<div class="menuBox" id="menuBox">
+				
+				</div>
+
+				<div class="articels" id="articles">
+<!-- 					<h2>段落1
+<p class="artDetails">哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了哈哈成长起来了</p>
+</h2> -->
+<!-- 					<h2>段落2</h2>
+<h2>段落3</h2>
+<h2>段落4</h2>
+<h2>段落5</h2>
+<h2>段落6</h2>
+<h2>段落7</h2>
+<h2>段落8</h2>
+<h2>段落9</h2>
+<h2>段落10</h2> -->
+				</div>
+				<div class="page">
+					<span class="pre">上一页</span>
+					<span class="next">下一页</span>
+				</div>
+			</div>
+			<div class="txt fl">
+				<h3>二级菜单和ajax异步加载数据</h3>
+					<p>1.二级菜单是通过ajax异步请求获得的</p>
+					<p>2.文档列表是通过选择菜单后异步获得的，并且分页也是异步获得的数据</p>
+					<p>3.段落详情是通过选择文章标题异步获得的</p>
+				<h3>原理说明：</h3>
+					<p>1ajax异步加载数据，请求数据</p>
+					<p>2.文章详情请求一次保存在本地dadas中，通过display来显示和隐藏 ，避免重复请求</p>
+					<p>2.分页数据通过参数page和每页要求的数目来获取数据</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- ajax异步请求结束 -->
+	<!-- CSS行列布局开始 -->
+	<div class="w slide clearfix">
+		<h2>产品排版布局</h2>
+		<div class="foodBox">
+			<div class="layoutBox publicLeft" id="layoutBox">
+				<ul>
+					<a href="javascript:;">
+						<li>
+							<div>
+								<div>
+									<h1>新品首发</h1>
+									<p>新品享免息</p>
+								</div>
+								<img src="imgs/css01.webp" alt="">
+							</div>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<div>
+								<div>
+									<h1>会逛</h1>
+									<p>秋潮穿搭 男装新品8.8折</p>
+								</div>
+								<img src="imgs/css02.webp" alt="">
+							</div>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<div>
+								<div>
+									<h1>奢侈大牌</h1>
+									<p>尽享品质生活</p>
+								</div>
+								<img src="imgs/css03.webp" alt="">
+							</div>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<div>
+								<div>
+									<h1>智能生活</h1>
+									<p>智能潮货 嗨购不停</p>
+								</div>
+								<img src="imgs/css04.webp" alt="">
+							</div>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<div>
+								<div>
+									<h1>京东超市</h1>
+									<p>精选超值好货 天天特价</p>
+								</div>
+								<img src="imgs/css05.webp" alt="">
+							</div>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<div>
+								<div>
+									<h1>白条商城</h1>
+									<p>最高12期免息</p>
+									
+								</div>
+								<img src="imgs/css06.webp" alt="">
+							</div>
+						</li>
+					</a>
+				</ul>
+			</div>
+			<div class="txt">
+				<h3>产品排版布局效果</h3>
+					<p>1.浮动排版布局，图片作为背景，鼠标移上有移动动画效果</p>
+				<h3>原理说明：</h3>
+					<p>浮动排版布局，图片作为背景，鼠标移上有移动动画效果</p>
+			</div>
+		</div>
+	</div>
+	<!-- CSS行列布局结束 -->
+	<!-- 块元素调换位置开始 -->
+	<div class="w slide clearfix">
+		<h2>元素拖拽调换位置</h2>
+		<div class="exchangeBox">
+			<div class="dragBox publicLeft" id="dragBox">
+				<ul id="ul">
+				</ul>
+			</div>
+			<div class="txt">
+				<h3>块元素调换位置效果</h3>
+					<p>1.鼠标按下拖拽时图片跟着移动</p>
+					<p>2.鼠标达到其他图片区域其他图片会有效果变化</p>
+					<p>3.鼠标最终停在哪个范围图片内，拖拽图片和目标图片切换位置</p>
+				<h3>原理说明：</h3>
+					<p>1.鼠标按下事件，鼠标移动时设置图片与鼠标一起移动</p>
+					<p>2.鼠标坐标进入其他区域图片，把此图片设置为目标位置</p>
+					<p>3.鼠标松开时切换拖拽图片和目标位置</p>
+					<p>4.某些情况图片不见的情况，没重现，重现了可以处理掉</p>
+			</div>
+		</div>
+	</div>
+	<!-- CSS行列布局结束 -->
+	<!-- 3D动画 开始-->
+	<div class="w slide clearfix">
+		<h2>3D动画效果</h2>
+		<div class="slidebox">
+			<div class="threedBox publicLeft" id="threedBox">
+				<ul>
+  					<li><img src="imgs/800-600-01.jpg" alt=""></li>
+					<li><img src="imgs/800-600-02.jpg" alt=""></li>
+					<li><img src="imgs/800-600-03.jpg" alt=""></li>
+					<li><img src="imgs/800-600-04.jpg" alt=""></li>
+					<li><img src="imgs/800-600-05.jpg" alt=""></li>
+					<li><img src="imgs/800-600-06.jpg" alt=""></li>  
+<!-- 					<li>上</li>
+<li>前</li>
+<li>下</li>
+<li>后</li>
+<li>左</li>
+<li>右</li>  -->
+<!-- <div class="heart"></div> 心形 -->
+				</ul>
+				
+			</div>
+			<div class="txt">
+				<h3>3D动画效果</h3>
+					<p>3D视图，旋转三维图片盒子</p>
+				<h3>原理说明：</h3>
+					<p>1.3D视图，旋转三维图片盒子</p>
+			</div>
+		</div>
+	</div>
+	<!-- 3D动画结束 -->
+	<!-- 轮播图部分 -->
+	<div class="w slide clearfix">
+		<h2>轮播图效果</h2>
+		<div class="slidebox">
+			<div class="imgBox" id="imgBox">
+				<ul>
+					<li><a href="#"><img src="imgs/800-600-01.jpg" alt=""></a></li>
+					<li><a href="#"><img src="imgs/800-600-06.jpg" alt=""></a></li>
+					<li><a href="#"><img src="imgs/800-600-03.jpg" alt=""></a></li>
+					<li><a href="#"><img src="imgs/800-600-04.jpg" alt=""></a></li>
+					<li><a href="#"><img src="imgs/800-600-05.jpg" alt=""></a></li>
+				</ul>
+
+			</div>
+			<div class="txt">
+				<h3>效果说明：</h3>
+					<p>1.自动定时播放</p>
+					<p>2.鼠标点击切换</p>
+					
+				<h3>原理说明：</h3>
+					<p>1.自动定时播放</p>
+					<p>2.鼠标点击切换</p>
+				
+				
+			</div>
+		</div>
+	</div>
+	<!-- 轮播图部分结束 -->
+
+
+	<!-- 3D轮播图2部分 -->
+	<div class="w slide clearfix">
+		<h2>3D轮播图</h2>
+		<div class="slidebox">
+			<div class="imgBox2 fl" id="imgBox2">
+			<span class="left">下一张</span>
+			<span class="right">上一张</span>
+			</div>
+			<div class="txt fl">
+				<h3>3D轮播图效果说明：</h3>
+					<p>1.3D轮播图自动播放二秒</p>
+					<p>2.鼠标移到图片大DIV上显示上下页并停止循环</p>
+					<p>2.鼠标点击上下页切换效果</p>
+					
+				<h3>原理说明：</h3>
+					<p>1.定义一个位置数组，每个位置是对象格式</p>
+					<p>2.定时器或者上下页将位置数组顺序打调换</p>
+					<p>3.重新显示图像位置，根据动画函数来缓动实现效果</p>
+			</div>
+		</div>
+	</div>
+	<!-- 3D轮播图2部分结束 -->
+	<!-- 打气球游戏部分 -->
+	<div class="w slide clearfix">
+		<h2>打气球游戏</h2>
+		<div class="slidebox">
+			<div class="imgBox balloonBox" id="balloonBox">
+			</div>
+			<div class="txt">
+				<h3>效果说明：</h3>
+					<p>1.每个气球速度不一样，匀速上升</p>
+					<p>2.点击一次会加整，大小变小</p>
+					<p>3.一定大小会消失</p>
+					<p>4.没到一定大小到最上面了，重新回到下面，位置随机 </p>
+				<h3>原理说明：</h3>
+					<p>1.动态生成固定个数气球</p>
+					<p>2.定时器让气球运动</p>
+					<p>3.点击的时候速度加一些，大小减一些</p>
+					<p>4.一定大小后消失，所有消失时弹出提示，消耗时间</p>
+			
+			</div>
+		</div>
+	</div>
+	<!-- 打气球游戏结束 -->
+	<!-- 贪吃蛇部分开始 -->
+	<div class="w slide clearfix">
+		<h2>贪吃蛇游戏</h2>
+		<div class="snakeBox">
+			<div class="snake fl" id="snake">
+				
+			</div>
+			<div class="txt fl">
+				<h3>贪吃蛇游戏效果说明：</h3>
+					<p>1.3D轮播图自动播放二秒</p>
+					<p>2.鼠标移到图片大DIV上显示上下页并停止循环</p>
+					<p>2.鼠标点击上下页切换效果</p>
+					
+				<h3>原理说明：</h3>
+					<p>1.定义一个位置数组，每个位置是对象格式</p>
+					<p>2.定时器或者上下页将位置数组顺序打调换</p>
+					<p>3.重新显示图像位置，根据动画函数来缓动实现效果</p>
+					<h3>补充说明：</h3>
+				<p>为了不影响其他功能，暂时注释了代码中的这部分，要开启的话去掉注释就好了// autoPlayTimer(flag);</p>
+
+			</div>
+		</div>
+	</div>
+	<!-- 贪吃蛇部分结束 -->
+	<!-- 动态加载图片开始 -->
+	<div class="w slide clearfix autoHeight">
+		<h2>图片动态加载</h2>
+		<div class="photoBox">
+			<div class="photo fl" id="photo">
+				
+			</div>
+			<div class="txt fl">
+				<h3>图片动态图效果说明：</h3>
+					<p>1.鼠标滚动到图片盒子顶部位置从窗口下面部分出来时显示对应图片</p>
+				<h3>原理说明：</h3>
+					<p>1.设置图片高度为0，src1属性为图片地址</p>
+					<p>2.窗口滚动条滚动时判断scrollTop和窗口高度之和大于图片位置顶部时</p>
+					<p>3.将图片高度设置为原始高度，src值为src1的值</p>
+			</div>
+		</div>
+	</div>
+	<!-- 动态加载图片结束 -->
+	<!-- 图片放大镜效果开始 -->
+	<div class="w slide clearfix autoHeight">
+		<h2>图片放大镜</h2>
+		<div class="zoomBox">
+			<div class="zoom fl" id="zoom">
+				
+			</div>
+			<div class="txt fl">
+				<h3>图片放大镜效果说明：</h3>
+					<p>1.鼠标在小图区域移动时，右边显示对应区域的放大效果图</p>
+				<h3>原理说明：</h3>
+					<p>1.鼠标移到小图区域时，显示放大镜和大图预览图</p>
+					<p>2.放大镜位置是鼠标XY轴减去二分之一放大镜长宽</p>
+					<p>3.预览大图是鼠标位置乘以大图比例的反方向，再加上二分之一大图预览区域的大小</p>
+			</div>
+		</div>
+	</div>
+	<!-- 图片放大镜效果结束 -->
+	
+</div>
+	
+</body>
+</html>

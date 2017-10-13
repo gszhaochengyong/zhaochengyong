@@ -1,0 +1,173 @@
+/*通用部分开始*/
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p {
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	font-family:微软雅黑;
+	color:#333;
+}
+ul {
+	list-style:none;
+}
+img,a img {
+	border:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+	cursor: pointer;
+}
+body{
+	background: #fff;
+}
+/*通用部分结束*/
+
+/*根据情况显示宽度的部分*/
+body.w1190 .wrap{
+	width: 1190px;
+	margin: 0 auto;
+}
+body.w990 .wrap{
+	width: 990px;
+	margin: 0 auto;
+}
+
+/*顶部开始*/
+
+/*top开始*/
+div.header>.top{
+	width: 100%;
+	height: 28px;
+	border-bottom: 1px solid #fafafa;
+	background: #f8f8f8;
+}
+div.header .top>.wrap>.left>ul>li{
+	display: block;
+	float: left;
+	line-height: 28px;
+	margin-right: 5px;
+	color: #999;
+}
+div.header .top>.wrap>.left>ul>li>a{
+	
+	font-size: 13px;
+	color: #ff6815;
+}
+.top>.wrap>.right{
+	float: right;
+}
+.top>.wrap>.right ul li{
+	line-height: 28px;
+	display: block;
+	float: left;
+	margin-left: 5px;
+	padding:0  18px 0 7px;
+	position: relative;
+}
+.top>.wrap>.right ul li span{
+	display: block;
+	width: 10px;
+	height: 5px;
+	background: url('../imgs/topBac.png') -15px -5px no-repeat;
+	position: absolute;
+	right: 3px;
+	top: 13px;
+}
+.top>.wrap>.right ul li:hover span{
+	background-position: -15px 0;
+	}
+.top>.wrap>.right ul a{
+	display: block;
+	color: #666;
+}
+.top>.wrap>.right ul a:hover{
+	color: #ff7800;
+}
+.top>.wrap>.right ul li:hover{
+	background: #fff;
+	box-shadow: 0 0 15px #ccc;
+}
+.top>.wrap>.right ul li:hover:after{
+	content: '';
+	width:100%;
+	height: 4px;
+	background: #fff;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+	z-index: 10;
+}
+.top>.wrap>.right ul li .detail{
+	width:130px;
+	height: 100px;
+	background: #fff;
+	position: absolute;
+	top: 28px;
+	left: 0px;
+	display: none;
+	padding: 5px;
+	z-index: 9;
+  	box-shadow: 0 0 5px #ccc;
+}
+.top>.wrap>.right ul li:nth-child(2)  .detail{
+	background: url('../imgs/phone.png') -18px 0 no-repeat;
+  	width: 150px;
+  	height: 220px;
+  	box-shadow: 0 0 0px #ccc;
+
+}
+.top>.wrap>.right ul li:nth-child(6){
+	width: 56px;
+}
+.top>.wrap>.right ul li:nth-child(6)  .detail{
+	top: 28px;
+	left: -59px;
+}
+.top>.wrap>.right ul li:hover .detail{
+	display: block;
+}
+/*top结束*/
+
+
+/*底部开始*/
+.footer{
+	width: 100%;
+	height: 100px;
+	background: #ffe;
+	position: relative;
+}
+.footer .wrap{
+	text-align: center;
+	color: #555;
+
+}
+.footer .wrap .top{
+	width: 70%;
+	height: 100%;
+	background: blue;
+	margin:0 auto 30px auto;
+}
+.footer .wrap .top a,.footer .wrap .top span{
+	display: block;
+	margin:20px 10px;
+	float: left;
+}
+.footer .wrap .top a{
+	font-size: 18px;
+}
+.footer .wrap .top a h3{
+	color: #555;
+	font-weight: normal;
+}
+.footer .wrap .top span{
+	font-size: 13px;
+}
+.footer .wrap p{
+	color: #555;
+	clear: both;
+}
+/*底部结束*/
+
+
