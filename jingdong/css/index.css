@@ -28,7 +28,7 @@
 
 /*banner背景结束*/
 
-/*中国主体部分*/
+/*中间主体部分*/
 .main{
 	position: relative;
 }
@@ -231,3 +231,133 @@ top: 3px; */
 	right: 0px;
 }
 /*双11结束*/
+
+/* 秒杀开始 */
+.ms{
+	width: 1210px;
+	height: 305px;
+	margin-bottom: 30px;
+}
+.ms .title{
+	height: 55px;
+	width: 1160px;
+	position: relative;
+	padding: 0 20px 0 30px;
+	background: url("../imgs/seckill_hd.png") no-repeat;
+	line-height: 55px;
+}
+.ms .title .triangle{
+	display: block;
+	height: 28px;
+	width: 28px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url("../imgs/sprite_index@1x.png") -193px -50px no-repeat;
+}
+.ms .title .left{
+	float: left;
+	background: url("../imgs/clock.png") no-repeat;
+	padding-left: 55px;
+}
+/*.ms .title .left .clock{
+	display:inline-block;
+	width: 45px;
+	height: 45px;
+	
+	margin-top: 5px;
+}*/
+.ms .title .left span{
+	height: 55px;
+	line-height: 55px;
+	color: #fff;
+}
+.ms .title .left span.h1{
+	font-size: 26px;
+	font-family:fzzhengheis-el-gbregular;
+}
+.ms .title .left span.h3{
+	font:400 14px/55px "微软雅黑";
+}
+.ms .title .left span.arrow{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	line-height: 15px;
+	border: 1px solid #ddd;
+	color: #ddd;
+	border-radius: 15px;
+	text-align: center;
+	font-family: "siSum";
+}
+ .ms .title .right{
+	padding-right: 20px;
+}
+.ms .title .right .time{
+	margin-top: 10px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #440106;
+	font:700 22px/40px "微软雅黑";
+	color: #f90013;
+	border-radius: 5px;
+}
+.ms .title .right .symbol{
+	font: 700 22px/40px "siSum";
+	color: #440106;
+}
+.ms .title .right .words{
+	font-size: 14px;
+	color: #fff;
+}
+
+
+.ms .items{
+	height: 225px;
+	padding: 12px 0  13px 0;
+}
+.ms .items .left{
+	width: 800px;
+	overflow: hidden;
+}
+.ms .items .left ul{
+	height: 225px;
+	width: 1000%;
+}
+.ms .items .left li{
+	width: 170px;
+	height: 225px;
+	float: left;
+	padding:0 14px 0 15px;
+	border-right: 1px solid #ccc;
+	text-align:center;
+}
+.ms .items .left li img{
+	width: 130px;
+	height: 130px;
+	margin: 17px auto;
+}
+.ms .items .left li p.des{
+	color: #999;
+	text-align: left;
+	display: block;
+	
+	max-width: 100%;
+	font-size: 12px;
+	height: 32px;
+	line-height: 16px;
+	overflow: hidden;
+ 	word-wrap: break-word;/* //下面这二个要配合上面overflow hidden使用 */
+ 	word-break: break-all;  
+}
+
+
+
+.ms .items .right{
+	width: 180px;
+	margin-right: 10px;
+} 
+/* 秒杀结束 */
