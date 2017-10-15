@@ -20,4 +20,27 @@ window.onload=function(){
 	 	$("#lists").style.display="none";
 	 }
 
+	 var topbanner=document.getElementById('topbanner');
+	var aclose=document.getElementById('a-close');
+	aclose.onclick=function () {
+		$(topbanner).slideUp(200,"linear");
+		 // topbanner.style.display='none';
+		// topbanner.style.css('display', 'none'); 这个为啥不行
+	}
+
+	//登陆点击弹出登陆框以及登陆框上的X关闭登陆框
+	var logina=document.getElementById('logina');
+	var loginpop=document.getElementById('loginpop');
+	var loginmask=document.getElementById('loginmask');
+	var closelogin=document.getElementById('closelogin');
+	logina.onclick=function(){
+		$(loginpop).show(10);
+		$(maskpop).show(30);
+	}
+	closelogin.onclick=function(){
+		loginpop.style.display="none";
+		maskpop.style.display="none";
+	}
+
+
 }
