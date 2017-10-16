@@ -316,16 +316,49 @@ top: 3px; */
 
 
 .ms .items{
+	background: #fff;
 	height: 225px;
 	padding: 12px 0  13px 0;
 }
 .ms .items .left{
-	width: 800px;
+	width: 1000px;
 	overflow: hidden;
+	position: relative;
 }
 .ms .items .left ul{
 	height: 225px;
 	width: 1000%;
+
+}
+.ms .items .left .page{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -25px;
+	display: none;
+}
+.ms .items .left:hover .page{
+	display: block;
+}
+.ms .items .left .page span{
+	display: block;
+	width: 20px;
+	height: 50px;
+	background: #ddd;
+	line-height: 50px;
+	text-align: center;
+	font:700 30px/50px "siSum";
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+}
+.ms .items .left  .page .pre{
+	left: 0;
+}
+.ms .items .left  .page .next{
+	right: 0;
 }
 .ms .items .left li{
 	width: 170px;
@@ -334,6 +367,21 @@ top: 3px; */
 	padding:0 14px 0 15px;
 	border-right: 1px solid #ccc;
 	text-align:center;
+	
+
+}
+.ms .items .left li .item{
+	position: relative;
+}
+.ms .items .left li span.topTips{
+	display: block;
+	width: 30px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	position: absolute;left: 0;
+	top: 0;
+	background: url("../imgs/sprite_index@1x.png") -55px -40px no-repeat;
 }
 .ms .items .left li img{
 	width: 130px;
@@ -354,10 +402,100 @@ top: 3px; */
  	word-break: break-all;  
 }
 
-
-
+.ms .items .left li p.price{
+	height: 25px;
+	padding: 3px 0;
+	line-height: 31px;
+	text-align: left;
+}
+.ms .items .left li p.price .i1{
+	color: #f10214;
+}
+.ms .items .left li p.price .i2{
+	color: #f10214;
+	font-size: 18px;
+	margin-right: 10px;
+}
+.ms .items .left li p.price .i3{
+	color: #999;
+}
+.ms .items .left li p.price .i4{
+	color: #999;
+	text-decoration:line-through;
+	font-size: 14px;
+	margin-left: 2px;
+}
 .ms .items .right{
 	width: 180px;
-	margin-right: 10px;
+	height: 225px;
+	margin: 0 13px;
+	position: relative;
 } 
+.ms .items .right ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+}
+.ms .items .right ul li{
+	float: left;
+}
+.ms .items .right ul li img{
+	width: 180px;
+	height: 225px;
+}
+.ms .items .right  .page{
+	height: 10px;
+	line-height: 10px;
+	width: 44px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -15px;
+}
+.ms .items .right .page span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #ccc;
+	/*border: 1px solid #999;*/
+	border-radius: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.ms .items .right .page span.active{
+	background: #e01222;
+}
 /* 秒杀结束 */
+
+
+/* 发现好货开始 */
+.goodPro{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 490px;
+}
+.goodPro .left{
+	width: 290px;
+	height: 100%;
+	margin-right: 10px;
+	background: pink;
+}
+/*通用top*/
+.goodPro .title{
+	width: 240px;
+	height: 60px;
+	/*padding: 0 20px 0 30px;*/
+}
+.goodPro .middle{
+	width: 450px;
+	height: 100%;
+	margin-right: 10px;
+	background: pink;
+}
+.goodPro .right{
+	width: 450px;
+	height: 100%;
+	background: yellow;
+}
+/* 发现好货结束 */
