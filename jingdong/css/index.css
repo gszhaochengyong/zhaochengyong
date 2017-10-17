@@ -479,13 +479,43 @@ top: 3px; */
 	width: 290px;
 	height: 100%;
 	margin-right: 10px;
-	background: pink;
 }
-/*通用top*/
-.goodPro .title{
-	width: 240px;
-	height: 60px;
-	/*padding: 0 20px 0 30px;*/
+.goodPro .left .items{
+	height: 410px;
+	padding: 10px;
+	background: #fff;
+}
+.goodPro .left .items ul li{
+	height: 130px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	padding: 5px auto;
+	background: #fff;
+}
+.goodPro .left .items ul li p{
+	position: absolute;
+	left: 30px;
+	top: 15px;
+	width: 80px;
+	height: 50px;
+	overflow: hidden;
+	line-height: 25px;
+	font-size: 14px;
+	color: #4998a1;
+	word-wrap: break-word;
+ 	word-break:break-all; 
+
+}
+.goodPro .left .items ul li img{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 40px;
+	bottom: 5px;
+	transition: 0.2s;
+}
+.goodPro .left .items ul li:hover img{
+	right: 50px;
 }
 .goodPro .middle{
 	width: 450px;
@@ -498,4 +528,82 @@ top: 3px; */
 	height: 100%;
 	background: yellow;
 }
+/*通用top*/
+.goodPro .title{
+	width: 100%px;
+	height: 60px;
+	padding: 0 20px 0 30px;
+	position: relative;
+	color: #fff;
+}
+.goodPro .title span.triangleBox{
+	width: 0;
+	height: 0;
+	border-top: 20px solid #fff;
+    border-right: 20px solid transparent;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+.goodPro .title  i.triangle{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../imgs/sprite_index@1x.png") no-repeat;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 10;
+
+}
+.goodPro .title h1,.goodPro .title .fr{
+	height: 40px;
+	line-height: 40px;
+	margin-top: 10px;
+}
+.goodPro .title h1{
+	font-size: 26px;
+}
+.goodPro .title .fr{
+	font-size: 14px;
+}
+.goodPro .title .fr{
+	color: #fff;
+	margin-top: 15px;
+}
+.goodPro .title .fr span.mark{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	border: 1px solid #ddd;
+	color: #ddd;
+	border-radius: 7px;
+	font:500 12px/14px "siSum"; 
+	position: static;
+	margin-left: 3px;
+	text-align: center;
+}
+/*通用top*/
+.goodPro .left .title{
+	background: #4998a1;
+}
+.goodPro .left .title  i.triangle{
+	background-position:-194px -100px; 
+}
+.goodPro .middle .title{
+	background: #76488e;
+}
+.goodPro .middle .title  i.triangle{
+	background-position:-3px -164px; 
+}
+.goodPro .right .title{
+	background: #e77005;
+}
+.goodPro .right .title  i.triangle{
+	background-position:-194px -4px; 
+}
+
+
 /* 发现好货结束 */
