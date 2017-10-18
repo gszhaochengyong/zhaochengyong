@@ -152,7 +152,7 @@ s,i,em{
     position: relative;
 }
 
-.fl  label,.fr label{
+.top .fl  label,.fr label{
     width: 14px;
     height: 7.5px;
     position: absolute;
@@ -161,7 +161,7 @@ s,i,em{
     overflow: hidden;
     margin-right: 3px;
 }
-.fl  span,.fr  label span{
+.top .fl  span,.fr  label span{
     width: 15px;
     height: 15px;
     /*font-style:italic;字体倾斜*/

@@ -521,12 +521,12 @@ top: 3px; */
 	width: 450px;
 	height: 100%;
 	margin-right: 10px;
-	background: pink;
+	background: #fff;
 }
 .goodPro .right{
 	width: 450px;
 	height: 100%;
-	background: yellow;
+	background: #fff;
 }
 /*通用top*/
 .goodPro .title{
@@ -604,6 +604,91 @@ top: 3px; */
 .goodPro .right .title  i.triangle{
 	background-position:-194px -4px; 
 }
-
-
+/*middel;*/
+.goodPro .middle .items{
+	width: 100%;
+	height: 430px;
+	overflow: hidden;
+	position: relative;
+}
+.goodPro .middle .items .bigUl{
+	width: 1000%;
+	height: 430px;
+	background: #fff;
+	position:absolute;
+/* 	left: 30px;
+top:30px; */
+}
+.goodPro .middle .items .bigUl li{
+	width: 450px;
+	height: 410px;
+	padding-top: 20px;
+}
+.goodPro .middle .items .bigUl li .top{
+	border-bottom: 2px solid #ccc;
+}
+.goodPro .middle .items .bigUl li .top,.goodPro .middle .items .bigUl li .bottom{
+	/*float: left;*/
+	width: 430px;
+	margin:18px 15px;
+	height: 160px;
+	background: #fff;
+}
+.goodPro .middle .items .bigUl li p{
+	margin-bottom: 15px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 10px;
+}
+.goodPro .middle .items .bigUl li img{
+	float: left;
+	width: 130px;
+	height: 110px;
+	margin:0 5px;
+	margin-bottom: 10px;
+}
+.goodPro .middle .items .page{
+	width: 430px;
+	height: 10px;
+	line-height: 10px;
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	margin-left: 15px;
+}
+.goodPro .middle .items .page span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #c8c8c8;
+	margin-right: 10px;
+}
+.goodPro .middle .items .page span.active{
+	background: #e01222;
+}
+/*bottom*/
+.goodPro .bottom  .items{
+	width: 450px;
+	height: 430px;
+	overflow: hidden;
+}
+.goodPro .bottom  .items .bigUl{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #ddd;
+}
+.goodPro .bottom  .items .bigUl .bigLi{
+	float: left;
+	position: relative;
+}
+.goodPro .bottom  .items .bigUl .bigLi .smallUl{
+	position: absolute;
+	top: 31px
+	left:0;
+}
 /* 发现好货结束 */
