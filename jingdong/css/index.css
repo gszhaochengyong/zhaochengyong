@@ -649,7 +649,7 @@ top:30px; */
 	margin:0 5px;
 	margin-bottom: 10px;
 }
-.goodPro .middle .items .page{
+.goodPro .middle .items .num{
 	width: 430px;
 	height: 10px;
 	line-height: 10px;
@@ -659,36 +659,168 @@ top:30px; */
 	left: 0;
 	margin-left: 15px;
 }
-.goodPro .middle .items .page span{
+.goodPro .middle .items .num span{
 	display: inline-block;
 	width: 10px;
 	height: 10px;
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 	border-radius: 5px;
 	background: #c8c8c8;
 	margin-right: 10px;
 }
-.goodPro .middle .items .page span.active{
+.goodPro .middle .items .num span.active{
 	background: #e01222;
 }
+.goodPro .middle .items .page{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -43px;
+	display: none;
+}
+.goodPro .middle .items:hover .page{
+	display: block;
+}
+.goodPro .middle .items .page span{
+	display: inline-block;
+	width: 20px;
+	height: 50px;
+	line-height: 50px;
+	font:500 26px/50px "siSum";
+	text-align: center;
+	background: #eee;
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+.goodPro .middle .items .page .pre{
+	float: left;
+}
+.goodPro .middle .items .page .next{
+	float: right;
+}
 /*bottom*/
-.goodPro .bottom  .items{
+.goodPro .right  .items{
 	width: 450px;
 	height: 430px;
 	overflow: hidden;
 }
-.goodPro .bottom  .items .bigUl{
+.goodPro .right  .items .bigUl{
 	width: 100%;
 	height: 30px;
 	border-bottom: 1px solid #ddd;
-}
-.goodPro .bottom  .items .bigUl .bigLi{
-	float: left;
 	position: relative;
 }
-.goodPro .bottom  .items .bigUl .bigLi .smallUl{
+.goodPro .right  .items .bigUl .bigLi{
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 5px;
+	padding:0px 15px;
+	border-right: 1px solid #ddd;
+	cursor: pointer;
+	
+}
+.goodPro .right  .items .bigUl .bigLi:last-child{
+	border-right: 0px solid #ddd;
+}
+.goodPro .right  .items .bigUl .bigLi p{
+	position: relative;
+	font-size: 14px;
+}
+.goodPro .right  .items .bigUl .bigLi.active>p:after{
+	content: "";
+	height: 1;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 23px;
+	border: 1px solid #f10214;
+
+}
+.goodPro .right  .items .bigUl .bigLi:last-child(){
+	border-right: 0px;
+}
+.goodPro .right  .items .bigUl .bigLi  .showBox{
+	width: 430px;
+	height: 400px;
+	padding:10px;
+	position: absolute;
+	top: 31px;
+	left: 0;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl{
 	position: absolute;
 	top: 31px
 	left:0;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li{
+	float: left;
+	width: 122px;
+	height: 166px;
+	padding:15px 10px;
+	text-align: center;
+
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li .img{
+	width: 100px;
+	height: 120px;
+	position: relative;
+	margin:0 auto 10px auto;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li .img img{
+	width: 100px;
+	height: 120px;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(1){
+	border-bottom: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(2){
+	border-bottom: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(3){
+	border-bottom: 1px solid #e7e7e7;
+
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(4){
+	border-right: 1px solid #e7e7e7;
+
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(5){
+	border-right: 1px solid #ddd;
+
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li p{
+	height: 32px;
+	line-height: 16px;
+	font-size: 12px;
+	overflow: hidden;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li .img span{
+	display: block;
+	width: 30px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url("../imgs/sprite_index@1x.png") -100px -100px no-repeat;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(1) .img span{
+	background-position: -105px -40px;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(2) .img span{
+	background-position: -50px -100px;
+}
+.goodPro .right  .items .bigUl .bigLi .showBox .smallUl li:nth-child(3) .img span{
+	background-position: -54px -40px;
 }
 /* 发现好货结束 */
