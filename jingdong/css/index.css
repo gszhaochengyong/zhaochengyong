@@ -2,8 +2,22 @@
 /*全部商品下拉菜单，因为只要主页才有，所有写在这里*/
 .jd-nav .dropmenu{
 	overflow: visible;
+	position: relative;
 }
-.jd-nav .gooditem{
+.jd-nav .goodItem{
+	display: block;
+}
+
+.jd-nav .goodItem .floatBox{
+	display:none;
+	width: 1000px;
+	height: 467px;
+	position: absolute;
+	background: #fff;
+	left: 210px;
+	top: 44px;
+}
+.jd-nav .goodItem:hover .floatBox{
 	display: block;
 }
 /*全部商品下拉菜单，因为只要主页才有，所有写在这里*/
@@ -824,3 +838,104 @@ top:30px; */
 	background-position: -54px -40px;
 }
 /* 发现好货结束 */
+/*享品会布局开始*/
+.life>h2{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 26px;
+	border-bottom: 2px dashed #ccc;
+}
+.foodBox .layoutBox ul{
+    /*width: 778px;*/
+    /*height: 578px;*/
+    overflow: hidden;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.foodBox .layoutBox ul li{
+    width: 380px;
+    height: 180px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 18px;
+}
+ .foodBox .layoutBox ul a:nth-child(3n) li{
+    margin-right: 0px;
+    margin-bottom: 6px;
+} 
+.foodBox .layoutBox ul li>div{
+     width: 380px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+.foodBox .layoutBox ul li>div>div{
+    width: 120px;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    padding-top: 50px;
+    background: #66B687;
+}
+.foodBox .layoutBox ul a:nth-child(3) li > div > div{
+    background: #DBCF6E;
+}
+
+.foodBox .layoutBox ul a:nth-child(2) li> div > div{
+    background: #7e5944;
+}
+.foodBox .layoutBox ul a:nth-child(4) li > div > div{
+    background: #534b5d;
+}
+.foodBox .layoutBox ul a:nth-child(5) li > div > div{
+    background: #3b838c;
+}
+.foodBox .layoutBox ul a:nth-child(6) li > div > div{
+    background: #d58717;
+}
+.foodBox .layoutBox ul a:nth-child(7) li > div > div{
+    background: #7e5944;
+}
+.foodBox .layoutBox ul a:nth-child(8) li > div > div{
+    background: #534b5d;
+}
+.foodBox .layoutBox ul a:nth-child(3) li > div > div{
+    background: #d58717;
+}
+.foodBox .layoutBox ul li>div>div h1{
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    margin:0 auto;
+    line-height: 40px;
+    font:500 18px/40px "微软雅黑";
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    margin-bottom: 5px;
+
+
+}
+.foodBox .layoutBox ul li>div>div p{
+    height: 20px;
+    width: 100px;
+    font:400 15px/20px "微软雅黑";
+    margin:0 auto;
+    color: #fff;
+}
+.foodBox .layoutBox ul li>div>img{
+    width: 420px;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+.foodBox .layoutBox ul li:hover>div>img{
+	left: -20px;
+}
+/*享品会布局结束*/
