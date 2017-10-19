@@ -10,12 +10,14 @@
 
 .jd-nav .goodItem .floatBox{
 	display:none;
-	width: 1000px;
-	height: 467px;
+	width: 980px;
+	height: 447px;
 	position: absolute;
 	background: #fff;
 	left: 210px;
 	top: 44px;
+	padding:10px;
+	font-size: 16px;
 }
 .jd-nav .goodItem:hover .floatBox{
 	display: block;
@@ -54,19 +56,26 @@
 	margin: 10px 0 0 220px;
 	overflow: hidden;
 }
-.main .slide img{
+.main .slide ul{
+	width: 1000%;
+	position: absolute;
+	left: 0px;
+	top: 0;
+}
+.main .slide ul li{
 	float: left;
-
+	width: 730px;
+	height: 454px;
 }
 .slide .num{
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
-	margin-left: -65px;
+	margin-left: -35px;
 }
-.slide .num li{
+.slide .num span{
 	float: left;
-	display: block;
+	display: inline-block;
 	width: 18px;
 	height: 18px;
 	background: #3E3E3e;
@@ -77,18 +86,22 @@
 	margin-right: 10px;
 	cursor: pointer;
 }
-.slide .num li.now{
+.slide .num span.active{
 	background: #B61B1F;
 }
-.slide .arr{
+.slide .page{
 	position: absolute;
 	top: 50%;
 	left: 0;
 	margin-top: -31px;
 	width: 100%;
 	height: 62px;
+	display: none;
 }
-.slide .arr a,.double11 .night .right span{
+.slide:hover .page{
+	display: block;
+}
+.slide .page span,.double11 .night .right span{
 	display: block;
 	width: 26px;
 	height: 62px;
@@ -99,16 +112,16 @@
 	color: #fff;
 	cursor: pointer;
 }
-.slide .arr a.pre
+.slide .page span.pre
 {
 	float: left;
 }
-.slide .arr a.next
+.slide .page span.next
 {
 	float: right;
 }
-.slide .arr a:hover,.double11 .night .right span:hover{
-	background: rgba(0,0,0,0.4);
+.slide .page span:hover,.double11 .night .right span:hover{
+	background: rgba(0,0,0,0.3);
 	/*opacity: 0.4;*/
 }
 .main .news{
@@ -218,31 +231,70 @@ top: 3px; */
 }
 .double11 .night .right{
 	width: 998px;
+	height: 164px;
 	float: right;
 	overflow: hidden;
 	margin-left: 2px;
 	position: relative;
 }
-.double11 .night .right ul{
-	width: 105%;
+.double11 .night .right>ul{
+	width: 1000%;
+	position: absolute;
+	left: 0;
+	top:0;
 }
-.double11 .night .right ul li {
+.double11 .night .right>ul .num11{
+	display: none;
+}
+.double11 .night .right>ul>li {
 	display: block;
-	width: 250px;
+	width: 998px;
 	height: 164px;
-
 	float: left;
-	margin-right: 1px;
+	/*margin-right: -2px;*/
 }
-.double11 .night .right span.pre{
-	position: absolute;
-	top: 52px;
-	left: 0px;
+.double11 .night .right>ul>li>ul{
+	width: 998px;
+	height: 164px;
 }
-.double11 .night .right span.next{
-	position: absolute;
-	top: 52px;
-	right: 0px;
+.double11 .night .right>ul>li>ul>li{
+	width: 249px;
+	height: 164px;
+	float: left;
+}
+.double11 .night .right>ul>li>ul>li img{
+		width: 250px;
+	height: 164px;
+  }
+.double11 .night .right .page11{
+  	width: 998px;
+  	height: 50px;
+  	position: absolute;
+  	left: 0;
+  	top:50%;
+  	margin-top: -25px;
+  	 display: none;
+ }
+ .double11 .night .right:hover .page11{
+
+  	 display: block;
+ }
+ .double11 .night .right .page11 span{
+ 	display: block;
+ 	text-align: center;
+ 	width: 25px;
+ 	height: 50px;
+ 	line-height: 50px;
+ 	font-size: 20px;
+ 	background: #ccc;
+
+ }
+.double11 .night .right .page11 span.pre{
+	float: left;
+
+}
+.double11 .night .right .page11 span.next{
+	float: right;
 }
 /*双11结束*/
 
@@ -630,10 +682,11 @@ top: 3px; */
 	height: 430px;
 	background: #fff;
 	position:absolute;
-/* 	left: 30px;
-top:30px; */
+ 	left: 0px;
+	top:0px;
 }
 .goodPro .middle .items .bigUl li{
+	float: left;
 	width: 450px;
 	height: 410px;
 	padding-top: 20px;
@@ -665,8 +718,8 @@ top:30px; */
 }
 .goodPro .middle .items .num{
 	width: 430px;
-	height: 10px;
-	line-height: 10px;
+	height: 15px;
+	line-height: 15px;
 	text-align: center;
 	position: absolute;
 	bottom: 20px;
@@ -675,12 +728,14 @@ top:30px; */
 }
 .goodPro .middle .items .num span{
 	display: inline-block;
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
 	/*border: 1px solid #ccc;*/
-	border-radius: 5px;
+	border-radius: 8px;
 	background: #c8c8c8;
 	margin-right: 10px;
+	cursor: pointer;
 }
 .goodPro .middle .items .num span.active{
 	background: #e01222;
@@ -763,11 +818,17 @@ top:30px; */
 	position: absolute;
 	top: 31px;
 	left: 0;
+	/*left: 450px;*/
+	display: none;
+	/*transition: 0.6s;*/
+}
+ .goodPro .right  .items .bigUl .bigLi.active  .showBox{
+	display: block;
 }
 .goodPro .right  .items .bigUl .bigLi .showBox .smallUl{
-	position: absolute;
-	top: 31px
-	left:0;
+/* 	position: absolute;
+top: 0px;
+left:0; */
 }
 .goodPro .right  .items .bigUl .bigLi .showBox .smallUl li{
 	float: left;

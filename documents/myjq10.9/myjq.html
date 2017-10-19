@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品</title>
+	<style type="text/css">
+	.divBox{
+		width: 1120px;
+		height: 600px;
+		margin:20px auto;
+		background: #f2f2f2;
+		overflow: hidden;
+	}
+	.div1 .product{
+		width: 300px;
+		height: 300px;
+		background: #f0f0f0;
+		float: left;
+	}
+	.cart .item{
+		float: left;
+	}
+
+	</style>
+	<!-- <script type="text/javascript" src="jquery-3.2.1.js"></script> -->
+	<script type="text/javascript" src="myjq.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+	<div class="divBox div1" id="divBox1">
+		<div class="div div2" id="div1">
+			<input type="text" id="input1">
+		</div>
+		<div class="div" id="div2">
+			<input type="text" id="input1">
+		</div>
+	</div>
+	<div>2
+		<a href="http://www.baidu.com" class="a" id="a">###</a>
+	</div>
+	<div id="ul">
+		<div id="num"></div>
+		<div id="page"></div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+var menuData={"菜单一":["菜单11","菜单12","菜单13"],"菜单二":["菜单21","菜单22","菜单23"],"菜单三":[],"菜单四":["菜单41","菜单42","菜单43"]};
+(function(){
+	/*jq(".div").each(function(i,dom){
+		dom.innerHTML="6666";
+	});*/
+	//console.log(jq().menu(menuData));
+	// console.log(jq(".div").eq(1));
+	//var index1=jq(jq(".div").eq(1));
+	//console.log(index1);
+	 //index1.innerHTML="444";//还没实现返回的是jq对象，不能直接调用html()方法
+	// var jq33=jq("#div1");
+	// var jq3322=jq(jq33);
+	// console.log(toString.call("#div1"));
+	// console.log(toString.call(jq33));
+/*	console.log(" i nput ");
+	console.log(jq().trim("i nput "));*/
+	console.log(jq("#div1"));
+/*	jq("#div1").on("click",function(){
+		this.style.background="red";
+	})*/
+/*	console.log(jq("#a"));
+	jq("#a").on("click",function(e){
+		console.log(this);
+		// this.preventDefault(e);这里不能用，和上面一样，返回的不是jq对象
+		jq("#a").preventDefault(e);
+	});*/
+	// console.log(jq("#div2").removeClass("div"));
+	console.log(jq("#div2").tab("div2"));
+/*111	jq("#div2").animate({"width":"200","height":"300"},function (argument) {
+		console.log(argument); 有问题，要调试好。
+	// })*/
+	//1111 jq().slide("ul",'num','page');
+})()
+</script>
+
+<script>
+/*			//jq版本号
+		this.verson="1.3";
+		//传的对象是否为空
+		console.log(toString.call(ele));
+		if(ele==null||ele=="[object Undefined]"){
+			this.dom="";
+		}else if (toString.call(ele)=="[object Object]") {
+			this.dom=ele;
+		}else if(toString.call(ele)=="[object String]"){//对象首字符和除首字符以外字条
+			var first=ele.substr(0,1);
+			var qFirst=ele.substr(1);
+			//判断id class tag
+			if(first==="#"){
+				this.dom=document.getElementById(qFirst);
+			}else if(first==="."){
+				this.dom=document.getElementsByClassName(qFirst);
+			}else{
+				this.dom=document.getElementsByTagName(ele);
+			}
+		}*/
+</script>

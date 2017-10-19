@@ -425,7 +425,10 @@ s,i,em{
     padding-left: 10px;
     border-left: 1px solid #B61D1D;
 }
-
+.goodItem ul li.active{
+    /*background: orange;*/
+    opacity: 0.8;
+}
 .goodItem ul li a{
     display: block;
     width: 150px;

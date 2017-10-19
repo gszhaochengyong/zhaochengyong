@@ -52,8 +52,8 @@ window.onload=function(){
 			//console.log("125px "+(-25)*i+"px");
 		}
 
-		// 根据图片数量显示数字个数
-		var slide=document.getElementById("slide");
+		// 根据图片数量显示数字个数  下面slide函数包括了生成
+/*		var slide=document.getElementById("slideMain");
 		var imgnum=slide.getElementsByTagName("img").length;
 		//alert(imgnum);
 		var numbox=document.createElement("div");
@@ -71,8 +71,59 @@ window.onload=function(){
 				li.setAttribute("class","now");
 			}
 
+		}*/
+	})();
+
+	//左侧菜单鼠标指向列表
+	(function(){
+		var menuList=document.getElementById("menuList");
+		var li=menuList.getElementsByTagName("li");
+		var lis=li.length;
+		var floatBox=document.getElementById("floatBox");
+
+		for (var i = 0; i < lis; i++) {
+			li[i].onmouseover=function(){
+				for (var j = 0; j < lis; j++) {
+					li[j].setAttribute("class",'');
+				}
+				this.setAttribute("class",'active');
+				floatBox.innerHTML=this.getElementsByTagName("a")[0].innerHTML+"的列表信息";
+			}
 		}
 	})();
 
+	
+	(function() {
+		//中部幻灯大号主轮播图
+		jq().slide("slideMain","ulMain","numMain","pageMain");
+		//双11活动的
+		jq().slide("right11","ul11","num11","page11");
+		//双11活动的
+		jq().slide("itemsMai","slideMai","numMai","pageMai");
+	})();
 
+	//排行榜
+	(function(){
+		var boxWidth=$("#rankingList").width();
+		// 方式1
+		/*		$("#rankingList>li").each(function(a,b){
+					var that=$(this);
+					that.hover(function() {
+						that.addClass('active');
+						that.siblings('li').removeClass('active')
+					});
+				});*/
+		//方式2
+				$("#rankingList").on("mouseover","li",function(){
+					$(this).addClass('active');
+					$(this).siblings('li').removeClass('active');
+				});
+		
+		//方式3加动画效果
+/*		$("#rankingList").on("mouseover","li",function(){
+					$(this).addClass('active');
+					$(this).children('.smallUl').fadeIn("300");
+					$(this).siblings('li').children('.smallUl').fadeOut("300");
+				});*/
+	})();
 }

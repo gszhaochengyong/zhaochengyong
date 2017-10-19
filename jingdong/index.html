@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/basic.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/myjq1.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 
 	<link rel="shortcut icon" href="favicon.ico">
@@ -102,7 +103,7 @@
 					<li><a href="#">家用电器</a><span>></span></li>
 					<li><a href="#">电脑办公</a><span>></span></li>
 					<li><a href="#">家用电器</a><span>></span></li>
-					<div class="floatBox">1111</div>
+					<div class="floatBox" id="floatBox">1111</div>
 				</ul>
 
 			</div>
@@ -139,14 +140,18 @@
 <!-- 中部幻灯和信息			 -->
 <div class="main w clearfix">
 
-		<div class="slide " id="slide">
-			<img src="imgs/slider1.jpg">
-			<img src="imgs/slider1.jpg">
-			<img src="imgs/slider1.jpg">
-
-			<div class="arr">
-				<a class="pre" href="javascript:;"><</a>
-				<a class="next" href="javascript:;">></a>
+		<div class="slide " id="slideMain">
+			<ul id="ulMain" class="ulMain">
+				<li><img src="imgs/slider1.jpg"></li>
+				<li><img src="imgs/slider2.jpg"></li>
+				<li><img src="imgs/slider3.jpg"></li>
+			</ul>
+			<div class="page" id="pageMain">
+				<span class="pre" href="javascript:;"><</span>
+				<span class="next" href="javascript:;">></span>
+			</div>
+			<div id="numMain" class="num">
+				
 			</div>
 		</div>	
 		
@@ -193,14 +198,39 @@
 <div class="double11 w clearfix">
 	<div class="night">
 		<div class="left"><img src="imgs/night.jpg"></div>
-		<div class="right">
-			<ul>
-				<li><a href="#"><img src="imgs/1.jpg" alt=""></a></li>
-				<li><a href="#"><img src="imgs/2.jpg" alt=""></a></li>
-				<li><a href="#"><img src="imgs/3.jpg" alt=""></a></li>
-				<li><a href="#"><img src="imgs/4.jpg" alt=""></a></li>
-				<span class="pre"><</span><span class="next">></span>
+		<div class="right" id="right11">
+			<ul id="ul11">
+				<li>
+					<ul>
+						<li><a href="#"><img src="imgs/1.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/2.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/2.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/1.jpg" alt=""></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#"><img src="imgs/2.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/3.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/2.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/3.jpg" alt=""></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#"><img src="imgs/4.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/4.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/3.jpg" alt=""></a></li>
+						<li><a href="#"><img src="imgs/4.jpg" alt=""></a></li>
+					</ul>
+				</li>
+
+				
 			</ul>
+			<div class="page11" id="page11">
+				<span class="pre"><</span><span class="next">></span>
+			</div>
+			<div id="num11"></div>
 		</div>
 	</div>	
 
@@ -404,7 +434,7 @@
 			<h1 class="fl">会买专辑</h1>
 			<div class="fr">优惠好物品<span class="mark">></span></div>
 		</div>
-		<div class="items">
+		<div class="items" id="itemsMai">
 
 			<ul id="slideMai" class="bigUl">
 				<li class="bigLi">
@@ -421,13 +451,39 @@
 						<img src="imgs/huiMai06.jpg" alt=""></img>
 					</div>
 				</li>
+				<li class="bigLi">
+					<div class="top">
+						<p>上天入海，运动相机让拍摄如影随行</p>
+						<img src="imgs/huiMai04.jpg" alt=""></img>
+						<img src="imgs/huiMai05.jpg" alt=""></img>
+						<img src="imgs/huiMai06.jpg" alt=""></img>
+					</div>
+					<div class="bottom">
+						<p>水泥地实战必备，减震耐磨篮球鞋来助攻</p>
+						<img src="imgs/huiMai07.jpg" alt=""></img>
+						<img src="imgs/huiMai08.jpg" alt=""></img>
+						<img src="imgs/huiMai09.jpg" alt=""></img>
+					</div>
+				</li>
+				<li class="bigLi">
+					<div class="top">
+						<p>上天入海，运动相机让拍摄如影随行</p>
+						<img src="imgs/huiMai10.jpg" alt=""></img>
+						<img src="imgs/huiMai12.jpg" alt=""></img>
+						<img src="imgs/huiMai18.jpg" alt=""></img>
+					</div>
+					<div class="bottom">
+						<p>水泥地实战必备，减震耐磨篮球鞋来助攻</p>
+						<img src="imgs/huiMai12.jpg" alt=""></img>
+						<img src="imgs/huiMai13.jpg" alt=""></img>
+						<img src="imgs/huiMai14.jpg" alt=""></img>
+					</div>
+				</li>
 			</ul>
-			<div class="num">
-				<span class="active"></span>
-				<span></span>
-				<span></span>
+			<div class="num" id="numMai">
+
 			</div>
-			<div class="page"><span class="pre"><</span><span class="next">></span></div>
+			<div class="page" id="pageMai"><span class="pre"><</span><span class="next">></span></div>
 		</div>
 	</div>
 	<div class="right fl">
@@ -438,7 +494,7 @@
 			<div class="fr">专属你的购物指南<span class="mark">></span></div>
 		</div>
 		<div class="items">
-			<ul class="bigUl">
+			<ul class="bigUl" id="rankingList">
 				<li class="bigLi active"><p>手机通讯国家</p>
 					<div class="showBox">
 						<ul class="smallUl">
@@ -523,7 +579,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>5</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking02.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -531,7 +587,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>4</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking03.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -539,7 +595,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>5</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking04.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -569,7 +625,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>3</span>
-									<img src="imgs/ranking03.webp" alt=""></img>
+									<img src="imgs/ranking01.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -585,7 +641,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>4</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking04.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -593,7 +649,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>5</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking05.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -632,7 +688,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>5</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking07.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -640,7 +696,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>4</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking06.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
@@ -648,7 +704,7 @@
 							<li class="smallLi">
 								<div class="img">
 									<span>5</span>
-									<img src="imgs/ranking01.webp" alt=""></img>
+									<img src="imgs/ranking05.webp" alt=""></img>
 								</div>
 								
 								<p>索尔诺简易布衣柜 加固大号衣柜 双人非实木布衣橱 卧室收纳衣服柜 咖啡色</p>
