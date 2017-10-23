@@ -72,6 +72,8 @@ s,i,em{
 body{
 	width: 100%;
 	height: 100%;
+    background: yellow;
+    opacity: 0.9;
 }
 .wh{
 	width: 100%;
@@ -79,7 +81,7 @@ body{
 	overflow: hidden;
     position: relative;
 }
-
+/*每页*/
 .page{
 	width: 100%;
     height: 100%;
@@ -93,5 +95,70 @@ body{
     -webkit-transform: translate(0,50%);
     -o-transform: translate(0,50%);
     -moz-transform: translate(0,50%); */
+    transition: 0.3s;
+    /*padding: 50px;*/
 
+}
+.page.pre{
+   top: -100%; 
+}
+.page.next{
+   top: 100%; 
+}
+.page.active{
+   top: 0; 
+}
+.page:first-child{
+    top: 0; 
+}
+/*导航*/
+.nav{
+    width: 80px;
+    height: auto;
+    position: fixed;
+    top: 40%;
+    left: 50px;
+    background:#45b5c9;
+    border: 1px solid #45b5c9;
+    border-radius: 5px;
+}
+.nav ul{
+    width: 100%;
+    height: 100%;
+    margin:5px 0px;
+}
+.nav ul li{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+
+}
+.nav ul li:hover{
+    color: orange;
+    /*border: 1px solid orange;*/
+}
+.nav ul li.active{
+    color: yellow;
+}
+
+/*主页*/
+.page{
+    display: table;
+
+}
+.page .main{
+    height: 100%;
+    width: 100%; 
+    display: table-cell;
+    vertical-align: middle; 
+    text-align: center;
+    background: red;
+    margin:0px auto;
 }
