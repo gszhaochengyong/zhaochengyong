@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01D34435.1147CCF0"
+Content-Type: multipart/related; boundary="----=_NextPart_01D34E41.12908BE0"
 
 此文档为“单个文件网页”，也称为“Web 档案”文件。如果您看到此消息，但是您的浏览器或编辑器不支持“Web 档案”文件。请下载支持“Web 档案”的浏览器，如 Windows? Internet Explorer?。
 
-------=_NextPart_01D34435.1147CCF0
+------=_NextPart_01D34E41.12908BE0
 Content-Location: file:///C:/B9CF0786/file2838.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -32,16 +32,16 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>user</o:Author>
   <o:LastAuthor>user</o:LastAuthor>
-  <o:Revision>38</o:Revision>
-  <o:TotalTime>30</o:TotalTime>
+  <o:Revision>40</o:Revision>
+  <o:TotalTime>32</o:TotalTime>
   <o:Created>2017-10-09T03:43:00Z</o:Created>
-  <o:LastSaved>2017-10-13T07:08:00Z</o:LastSaved>
+  <o:LastSaved>2017-10-26T01:59:00Z</o:LastSaved>
   <o:Pages>2</o:Pages>
   <o:Words>342</o:Words>
-  <o:Characters>1953</o:Characters>
+  <o:Characters>1954</o:Characters>
   <o:Lines>16</o:Lines>
   <o:Paragraphs>4</o:Paragraphs>
-  <o:CharactersWithSpaces>2291</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>2292</o:CharactersWithSpaces>
   <o:Version>12.00</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -399,12 +399,13 @@ n"/>
 	mso-font-pitch:variable;
 	mso-font-signature:3 680460288 22 0 262145 0;}
 @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
-	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+	mso-font-signature:3 680460288 22 0 262145 0;}
 @font-face
 	{font-family:"microsoft yahei";
 	panose-1:0 0 0 0 0 0 0 0 0 0;
@@ -1853,7 +1854,7 @@ div.Section1
 	font-family:"Times New Roman","serif";}
 </style>
 <![endif]--></meta><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext=3D"edit" spidmax=3D"11266"/>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"13314"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext=3D"edit">
   <o:idmap v:ext=3D"edit" data=3D"1"/>
@@ -2087,8 +2088,8 @@ an
 ,"serif";
         color:#666666'><o:p></o:p></span></p>
         </td>
-        <td width=3D232 valign=3Dtop style=3D'width:174.15pt;padding:0cm 0cm=
- 0cm 0cm'>
+        <td width=3D232 valign=3Dtop style=3D'width:174.15pt;padding:0cm 0c=
+m 0cm 0cm'>
         <p class=3DMsoNormal style=3D'line-height:18.0pt;word-break:break-a=
 ll'><span
         style=3D'font-size:9.0pt;mso-ascii-font-family:"microsoft yahei";
@@ -2307,18 +2308,12 @@ an
         lang=3DEN-US>&nbsp;<span style=3D'font-variant-ligatures: normal;
         font-variant-caps: normal;orphans: 2;text-align:start;widows: 2;
         -webkit-text-stroke-width: 0px;float:left;word-spacing:0px'>&nbsp;<=
-/span></span><span
-        style=3D'font-variant-ligatures: normal;font-variant-caps: normal;
-        orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0p=
-x;
-        float:left;word-spacing:0px'></span>&#33050;&#26412;&#24320;&#21457=
-;&#24037;&#31243;&#24072;<span
-        lang=3DEN-US>&nbsp;</span></span><span style=3D'font-variant-ligatu=
-res: normal;
+/span></span>&#33050;&#26412;&#24320;&#21457;&#24037;&#31243;&#24072;<span
+        lang=3DEN-US>&nbsp;<span style=3D'font-variant-ligatures: normal;
         font-variant-caps: normal;orphans: 2;text-align:start;widows: 2;
-        -webkit-text-stroke-width: 0px;float:left;word-spacing:0px'>&#20114=
-;&#32852;&#32593;&#36719;&#20214;&#24320;&#21457;&#24037;&#31243;&#24072;</=
-span>
+        -webkit-text-stroke-width: 0px;float:left;word-spacing:0px'></span>=
+</span>&#20114;&#32852;&#32593;&#36719;&#20214;&#24320;&#21457;&#24037;&#31=
+243;&#24072;</span>
         &#25163;&#26426;&#32593;&#31449;&#24320;&#21457;</span><span
         class=3Dtag2><span lang=3DEN-US style=3D'font-size:9.0pt;font-famil=
 y:"microsoft yahei","serif";
@@ -2441,8 +2436,8 @@ nt-family:
         color:#333333'>PHP</span><span style=3D'font-size:9.0pt;mso-ascii-f=
 ont-family:
         "microsoft yahei";mso-hansi-font-family:"microsoft yahei";color:#33=
-3333'>&#24182;&#24320;&#21457;&#36807;&#21338;&#23458;&#32593;&#31449;</spa=
-n><span
+3333'>&#24182;&#24320;&#21457;&#36807;&#21338;&#23458;&#32593;&#31449;&#122=
+90;</span><span
         lang=3DEN-US style=3D'font-size:9.0pt;font-family:"microsoft yahei"=
 ,"serif";
         color:#333333'><br>
@@ -2602,14 +2597,13 @@ ll'><strong><span
         <td colspan=3D2 style=3D'padding:0cm 0cm 0cm 0cm'>
         <p class=3DMsoNormal><span lang=3DEN-US style=3D'font-size:9.0pt;fo=
 nt-family:
-        "microsoft yahei","serif"'><span style=3D'mso-spacerun:yes'>&nbsp;<=
-/span><span
-        style=3D'mso-spacerun:yes'>&nbsp;</span><span
-        style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span
-        style=3D'font-size:9.0pt;mso-ascii-font-family:"microsoft yahei";
-        mso-hansi-font-family:"microsoft yahei"'>&#28145;&#22323;&#28120;&#=
-20048;&#32593;&#32476;&#31185;&#25216;&#26377;&#38480;&#20844;&#21496;</spa=
-n><span
+        "microsoft yahei","serif"'><span
+        style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span
+        style=3D'mso-spacerun:yes'>&nbsp;</span></span><span style=3D'font-=
+size:
+        9.0pt;mso-ascii-font-family:"microsoft yahei";mso-hansi-font-family:
+        "microsoft yahei"'>&#28145;&#22323;&#28120;&#20048;&#32593;&#32476;=
+&#31185;&#25216;&#26377;&#38480;&#20844;&#21496;</span><span
         class=3Dgray3><span lang=3DEN-US style=3D'font-size:9.0pt;font-fami=
 ly:"microsoft yahei","serif"'>&nbsp;[5</span></span><span
         class=3Dgray3><span style=3D'font-size:9.0pt;mso-ascii-font-family:=
@@ -2756,24 +2750,22 @@ ll'><strong><span
 ,"serif";
         color:#333333'>SQA<span
         style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
-p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
-nbsp;
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span><span style=3D'mso-spacerun:yes'>&nbsp;</span><span
-        style=3D'mso-spacerun:yes'>&nbsp;&nbsp;</span><o:p></o:p></span></p>
+        style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span><o:p></o:p></sp=
+an></p>
         </td>
        </tr>
        <tr style=3D'mso-yfti-irow:1'>
         <td colspan=3D2 style=3D'padding:0cm 0cm 0cm 0cm'>
         <p class=3DMsoNormal><span lang=3DEN-US style=3D'font-size:9.0pt;fo=
 nt-family:
-        "microsoft yahei","serif"'><span style=3D'mso-spacerun:yes'>&nbsp;<=
-/span><span
-        style=3D'mso-spacerun:yes'>&nbsp;</span><span
-        style=3D'mso-spacerun:yes'>&nbsp; </span></span><span style=3D'font=
--size:
-        9.0pt;mso-ascii-font-family:"microsoft yahei";mso-hansi-font-family:
-        "microsoft yahei"'>&#23425;&#36828;&#31185;&#25216;&#26377;&#38480;=
-&#20844;&#21496;</span><span
+        "microsoft yahei","serif"'><span style=3D'mso-spacerun:yes'>&nbsp;&=
+nbsp;
+        </span><span style=3D'mso-spacerun:yes'>&nbsp;</span></span><span
+        style=3D'font-size:9.0pt;mso-ascii-font-family:"microsoft yahei";
+        mso-hansi-font-family:"microsoft yahei"'>&#23425;&#36828;&#31185;&#=
+25216;&#26377;&#38480;&#20844;&#21496;</span><span
         class=3Dgray3><span lang=3DEN-US style=3D'font-size:9.0pt;font-fami=
 ly:"microsoft yahei","serif"'>&nbsp;[2</span></span><span
         class=3Dgray3><span style=3D'font-size:9.0pt;mso-ascii-font-family:=
@@ -3157,12 +3149,11 @@ ii-font-family:
 pan><span
           style=3D'font-size:9.0pt;mso-ascii-font-family:"microsoft yahei";
           mso-hansi-font-family:"microsoft yahei";color:#333333'>&#38754;&#=
-21521;&#23545;&#35937;&#23567;&#28216;&#25103;&#36138;&#21507;&#34503;</spa=
-n><span
-          lang=3DEN-US style=3D'font-size:9.0pt;font-family:"microsoft yahe=
-i","serif";
-          color:#333333'>, <span style=3D'mso-spacerun:yes'>&nbsp;</span></=
-span><span
+21521;&#23545;&#35937;&#23567;&#28216;&#25103;&#36138;&#21507;&#34503;&#652=
+92;</span><span
+          style=3D'font-size:9.0pt;font-family:"microsoft yahei","serif";
+          color:#333333'> <span style=3D'mso-spacerun:yes'>&nbsp;</span></s=
+pan><span
           style=3D'font-size:9.0pt;mso-ascii-font-family:"microsoft yahei";
           mso-hansi-font-family:"microsoft yahei";color:#333333'>&#25171;&#=
 27668;&#29699;&#31561;</span><span
@@ -3619,7 +3610,7 @@ mily:"Times New Roman","serif";
 
 </html>
 
-------=_NextPart_01D34435.1147CCF0
+------=_NextPart_01D34E41.12908BE0
 Content-Location: file:///C:/B9CF0786/file2838.files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -3680,7 +3671,7 @@ AAAA0QIAAHRoZW1lL3RoZW1lL3RoZW1lMS54bWxQSwECLQAUAAYACAAAACEADdGQn7YAAAAbAQAA
 JwAAAAAAAAAAAAAAAACuCQAAdGhlbWUvdGhlbWUvX3JlbHMvdGhlbWVNYW5hZ2VyLnhtbC5yZWxz
 UEsFBgAAAAAFAAUAXQEAAKkKAAAAAA==
 
-------=_NextPart_01D34435.1147CCF0
+------=_NextPart_01D34E41.12908BE0
 Content-Location: file:///C:/B9CF0786/file2838.files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -3690,7 +3681,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01D34435.1147CCF0
+------=_NextPart_01D34E41.12908BE0
 Content-Location: file:///C:/B9CF0786/file2838.files/header.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -3711,7 +3702,7 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
 <base href=3D"file:///C:\B9CF0786\file2838.files\header.htm"
 id=3D"webarch_temp_base_tag">
 <![endif]><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext=3D"edit" spidmax=3D"11266"/>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"13314"/>
 </xml><![endif]-->
 </head>
 
@@ -3765,7 +3756,7 @@ r:footnote-continuation-separator'><![if !supportFootnotes]>
 
 </html>
 
-------=_NextPart_01D34435.1147CCF0
+------=_NextPart_01D34E41.12908BE0
 Content-Location: file:///C:/B9CF0786/file2838.files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3777,4 +3768,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"header.htm"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01D34435.1147CCF0--
+------=_NextPart_01D34E41.12908BE0--
