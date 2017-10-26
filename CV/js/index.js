@@ -12,7 +12,6 @@ $(function(){
 			li.html(pageItem[i]);
 			ul.append(li);
 		}
-		console.log(ul);
 		$("#nav").append(ul);
 	})();
 
@@ -42,33 +41,58 @@ $(function(){
 		$("#CVBox").height(winHeight+'px');
 	};
 
+
+	var type=1;//下箭头标记
+	var pageTurning=$("#pageTurning");//下一页盒子标签盒子
 	(function(){
 		//鼠标滚轴事件
 		$(document).on("mousewheel DOMMouseScroll",".page",function(event){
 			var event=event||window.event;
 			var wheelDelta=event.originalEvent.wheelDelta;//这个值小于0是向下滚，大于0是向上滚动
-			//用操作类的方式更好
 			if(wheelDelta<0&&$(this).index()<pages-1){
-				$(this).attr('class','page').addClass('pre');
-				$(this).next(".page").addClass('active');
-				$("#nav ul li").eq($(this).index()).removeClass('active');
-				$("#nav ul li").eq($(this).index()+1).addClass('active');
+				pageChange(this,1,pageTurning);//向下type给1
 
 			}else if(wheelDelta>0&&$(this).index()>0){
-				$(this).attr('class','page').addClass('next');
-				$(this).prev(".page").addClass('active');
-				$("#nav ul li").eq($(this).index()).removeClass('active');
-				$("#nav ul li").eq($(this).index()-1).addClass('active');
+				pageChange(this,0,pageTurning);//向上type给0
 			}
 		});
+		//上下箭头
+		pageTurning.on("click",function(){
+			var types=type;//这里不能奖整个type传入函数，然后在下面的函数改这个type值，相当于改函数的参数了，影响不到全局type值
+			pageChange($(".page.active")[0],types,pageTurning);
+
+		})
 	})();
+
+	//鼠标滚轴和上下箭头切换函数  参数 当前active页对象 上下类型 上下页对象
+	function pageChange(item,types,pageTurning){
+		if(types){//向下滚动或者点击下箭头时
+			$(item).attr('class','page').addClass('pre');
+			$(item).next(".page").addClass('active');
+			$("#nav ul li").eq($(item).index()).removeClass('active');
+			$("#nav ul li").eq($(item).index()+1).addClass('active');
+			if($(item).index()==pages-2){//向下，当前对象是倒数第二个时
+				type=0;
+				pageTurning.css('backgroundImage', 'url("imgs/up.png")');
+			}
+		}else{
+			$(item).attr('class','page').addClass('next');
+			$(item).prev(".page").addClass('active');
+			$("#nav ul li").eq($(item).index()).removeClass('active');
+			$("#nav ul li").eq($(item).index()-1).addClass('active');
+			if($(item).index()==1){//向上，当前对象是第二个时
+				type=1;
+				pageTurning.css('backgroundImage', 'url("imgs/down.png")');
+			}
+		}
+		
+		
+	}
 
 	//导航点击
 	$("#nav").on('click', 'ul li', function(event) {
 		event.preventDefault();
-		console.log($(this).index());
 		if($(this).index()!=$("ul li.active").index()){
-			console.log($(this).index());
 			$('ul li.active').removeClass('active');
 			$(this).addClass('active');
 			$(".page").eq($(".page.active").index()).removeClass('active');
@@ -83,6 +107,14 @@ $(function(){
 				}
 
 			}
+		}
+		if($(this).index()==pages-1){
+			type=0;
+			pageTurning.css('backgroundImage', 'url("imgs/up.png")');
+		}
+		if($(this).index()==0){
+			type=1;
+			pageTurning.css('backgroundImage', 'url("imgs/down.png")');
 		}
 	});
 	//用这个效果咋不行，移一下就跳到最后一个了，是不是循环完了才绑定最后一次？
@@ -101,4 +133,15 @@ $(function(){
 			$("#nav ul li").eq(item.index()+1).addClass('active');
 		}
 	}*/
+
+	function a(argument) {
+		var i=0;
+		return function b(){
+			console.log(++i);
+		}
+	}
+	var c=a();
+	for (var i = 0; i <10; i++) {
+		c();
+	}
 })
