@@ -190,6 +190,7 @@ body{
     vertical-align: middle; 
     text-align: center;
     margin:0px auto;
+    position: relative;
 }
 .page .main .img{
     width: 150px;
@@ -227,8 +228,16 @@ body{
      color: #008a75;
      font-size: 16px;
 }
+
+.page .main p.tips{
+    color: red;
+}
+.page .main .tips{
+    position: absolute;
+    left: 20px;
+}
 .page .main .evaluation{
-    width: 50%;
+    width: 70%;
     margin:0 auto;
     line-height: 25px;
     /*text-align: left;*/
@@ -238,11 +247,45 @@ body{
 .page .main .title{
     margin: 20px auto;
 }
+.page .main .title a{
+    color: #00ff00;
+}
+
 .page .main a.download{
-    margin-top: 20px;
+    margin-top: 30px;
     color: #9f3;
     font-size: 26px;
 }
 .page .main a.download:hover{
    color: yellow;
+}
+.page .main .links{
+    margin-top: 30px;
+}
+.page .main .links a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-image: url("../imgs/social.png");
+    border: 10px solid #ccc;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-right: 5px;
+}
+.page .main .links a:hover{
+    border-radius: 10px;
+}
+.page .main .links a:nth-child(1){
+    background-position: 0 0;
+}
+.page .main .links a:nth-child(2){
+    background-position: -45px 0;
+}
+.page .main .links a:nth-child(3){
+    background-position: -80px 0;
+}
+.page .main .links a:nth-child(4){
+    background-position: -120px 0;
 }

@@ -1,5 +1,6 @@
 $(function(){
 	var winHeight=$(window).height();
+	var winWidth=$(window).width();
 	var pages=$(".page").length;
 	var pageItem=["首页","求职意向","项目经验","工作经验","教育经历","培训经历","联系方式"];
 	
@@ -133,15 +134,29 @@ $(function(){
 			$("#nav ul li").eq(item.index()+1).addClass('active');
 		}
 	}*/
-
-	function a(argument) {
-		var i=0;
-		return function b(){
-			console.log(++i);
+	(function(){
+		//tips提示动画
+		var tips=$("#tips");
+		var left;//距离左边边距 
+		var distance=20;//离二边最小距离
+		
+		var timer=setInterval(tipsAnimate, 1000);
+		function tipsAnimate(){
+			console.log('111');
+			left=tips.offset().left;
+			if(left<=distance){
+				tips.animate({
+					'left': winWidth-distance-tips.width()+'px',
+					'opacity': "0.6",
+				},5000);
+			}else if(left>=winWidth-distance-tips.width()){
+				tips.animate({
+					'left': distance+'px',
+					'opacity': "1",
+				},
+					5000);
+			}
 		}
-	}
-	var c=a();
-	for (var i = 0; i <10; i++) {
-		c();
-	}
+	})();
+
 })
