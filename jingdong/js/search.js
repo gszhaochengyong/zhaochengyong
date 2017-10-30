@@ -1,7 +1,9 @@
 window.onload=function(){
 
 	//高级选项鼠标指向显示下拉菜单功能
+	console.log(document.getElementById("allgoods"));
 	var lis=document.getElementById("ids").getElementsByTagName("li");
+
 	var divshidden=document.getElementById("float").getElementsByTagName("div");
 	for (var i = 0; i < lis.length; i++) {
 		lis[i].index=i;
@@ -20,7 +22,7 @@ window.onload=function(){
 	 	$("#lists").style.display="none";
 	 }
 
-	 var topbanner=document.getElementById('topbanner');
+	var topbanner=document.getElementById('topbanner');
 	var aclose=document.getElementById('a-close');
 	aclose.onclick=function () {
 		$(topbanner).slideUp(200,"linear");
@@ -33,6 +35,7 @@ window.onload=function(){
 	var loginpop=document.getElementById('loginpop');
 	var loginmask=document.getElementById('loginmask');
 	var closelogin=document.getElementById('closelogin');
+	console.log(maskpop)
 	logina.onclick=function(){
 		$(loginpop).show(10);
 		$(maskpop).show(30);
@@ -43,4 +46,18 @@ window.onload=function(){
 	}
 
 
+	//搜索输入框处理2仿淘宝的效果
+	$("#searchInput").focus();
+    $("#searchInput").on("input propertychange",function(){
+   	  console.log("ddd");
+   	 if ($(this).val()=='') {
+   	 	$("#d11").css("display","block");
+   	 } else {
+   	 	$("#d11").css("display","none")
+   	 }
+   	 
+   });
+
+
 }
+	

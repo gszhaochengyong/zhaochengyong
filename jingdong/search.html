@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/search.css">
 	<script type="text/javascript" src="js/basic.js"></script>
 	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<!-- <script type="text/javascript" src="js/basic.js"></script> -->
 	<script type="text/javascript" src="js/search.js"></script>
 	<link rel="shortcut icon" href="favicon.ico">
 	<script type="text/javascript">
@@ -15,12 +16,15 @@
 </head>
 <body>
 <!-- 京东的头部开始 -->
+<div id="maskpop">
+	<div id="loginpop"><span id="closelogin">X</span></div>
+</div>
 <div class="top">
 	<div class="w">
 		<div class="fl">你的位置 <a href="">深圳</a><label><span>◇</pan></label> </div>
 		<div class="fr">
 			<ul>
-				<li class="noline" >你好，请<a href="javascript:;" id="logina" class="col-red">登陆</a></li>
+				<li class="noline" >你好，请 <a href="javascript:;" id="logina" class="col-red">登陆</a></li>
 				<li class="register"><a href="" class="col-red">免费注册</a><label><span>◇</pan></label></li>
 				<li><a href="">我的订单</a></li>
 				<li><a href="" class="cursor">我的京东</a><label><span>◇</pan></label></li>
@@ -36,7 +40,7 @@
 </div>
 <!-- 京东的头部结束 -->
 <!-- topbanner开始 -->
-<div class="topbanner">
+<div class="topbanner" id="topbanner">
 	<div class="w close-icon">
 		<img src="imgs/topbanner.jpg">
 		<a href="javascript:;" class="close" id="a-close"></a> <!-- 阻止默认跳转行为javascript:; -->
@@ -50,7 +54,9 @@
 		<a href="" class="huodong"><img src="imgs/dong.gif" title="活动倒计时"></a>
 	</div>
 	<div class="search">
-		<input name="searchInput" value="图书开抢">
+		<!-- <input name="searchInput" value="图书开抢"> -->
+		<input name="searchInput"  id="searchInput">
+		<span id="d11">双11促销</span>
 		<a href="index.html"><button>搜索</button></a>
 	</div>
 	<div class="car">
@@ -966,7 +972,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="618banner w clearfix">
+	<div class="banner618 w clearfix">
 		<a href=""><img src="imgs/618banner.jpg" alt=""></a>
 	</div>
 </div>
@@ -982,7 +988,7 @@
 
 <!-- footer开始 -->
 <div class="footer">
-	<div class="photo clearfix">
+	<div class="photo clearfix w">
 		<span class="icon1"></span>
 		<span class="icon2"></span>
 		<span class="icon3"></span>

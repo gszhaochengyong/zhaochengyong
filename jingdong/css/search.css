@@ -1158,18 +1158,23 @@
 	color:#e3393c;
 	font:500 13px/20px 微软雅黑;
 }
-.618banner{
+.banner618{
 	width: 1210px;
 	height: 115px;
+	overflow: hidden;
 }
-.618banner a{
+.banner618 a{
 	display: block;
-	height: auto;
-	width: 100%;
+	width: 1210px;
+	height: 115px;
+	/*height: auto;*/
+	/*width: 100%;*/
 }
-.618banner a img{
+.banner618 a img{
 	width: 1210px;
 	height: 115px;
 }
-
+.nav-select{
+	margin-bottom: 30px;
+}
 /*足迹结束*/

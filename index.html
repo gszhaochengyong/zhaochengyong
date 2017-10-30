@@ -3,11 +3,93 @@
 <head>
 	<meta charset="UTF-8">
 	<title>赵成勇 前端开发 简历及作品</title>
+
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			
+		}
+		.whole{
+			padding:300px 0 0;
+			text-align: center;
+			position: relative;
+		}
+		.whole .welcome{
+			font-size: 56px;
+			color: green;
+			position: absolute;
+			left: 50%;
+			top:20px;
+			margin-left: -185px;
+		}
+		.whole .links{
+			margin:70px 0 0 0 ;
+		}
+		.whole .links a{
+			display: block;
+			font-size: 36px;
+			width: auto;
+			height: 50px;
+			line-height: 50px;
+			margin-bottom: 20px;
+
+		}
+		.whole .links a:hover{
+			color: blue;
+		}
+	</style>
+	<script src="jquery1.8.3.js"></script>
 </head>
 <body>
-	<a href="./CV/index.html">简历</a>
-	<a href="./xiaomi/index.html">小米网首页</a>
-	<a href="./jingdong/index.html">京东首页</a>
-	<a href="./effects/index.html">各种特效等</a>
+<div class="whole">
+	<div class="welcome" id="welcome">欢迎您的到来！</div>
+	<div class="links" id="links">
+		<a href="./CV/index.html" target="_blank">赵成勇 WEB前端简历</a>
+		<a href="./xiaomi/index.html" target="_blank">小米官网首页、搜索页</a>
+		<a href="./jingdong/index.html" target="_blank">京东商场官网首页</a>
+		<a href="./foudao/index.html" target="_blank">孚道仁医网医疗网</a>
+		<a href="./effects/index.html" target="_blank">各种特效示例等</a>
+	</div>
+</div>
+	
 </body>
+<script>
+	console.log($("#welcome").height());
+	console.log($("#links").offset().top);
+	var welHei=$("#welcome").height();//welcome本身高度
+	var wel=$("#welcome");
+	var welTopIni=$("#welcome").offset().top;//welcome最小top值
+	var welTopMov;//welcome变化的top值，
+	var offTopLinks=$("#links").offset().top;//links与顶部的top值
+	var linkToTop=70;//links要保持的margin 70象素
+	var welTopMax=offTopLinks-linkToTop-welHei;//welcome最多top值
+	
+	(function(){
+		var timer=setInterval(moving,1000);
+		function moving(){
+			welTopMov=$("#welcome").offset().top;
+			if(welTopMov<=welTopIni){
+				wel.animate({
+					top:welTopMax+'px',
+					opacity:"0.6"
+				},3000);
+			}else if(welTopMov>=(welTopMax)){
+				wel.animate({
+					top: welTopIni+'px',
+					opacity:"1"
+					
+				},3000);
+			}
+		}
+	})()
+</script>
 </html>

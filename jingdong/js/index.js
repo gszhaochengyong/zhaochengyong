@@ -20,6 +20,7 @@ window.onload=function(){
 		var closelogin=document.getElementById('closelogin');
 		logina.onclick=function(){
 			$(loginpop).show(10);
+			console.log(maskpop);
 			$(maskpop).show(30);
 		}
 		closelogin.onclick=function(){
