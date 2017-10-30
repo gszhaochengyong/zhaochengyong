@@ -205,6 +205,7 @@ body{
     width: 150px;
     height: 150px;
 }
+
 .page .main h1{
     height: 50px;
     line-height: 50px;
@@ -230,6 +231,9 @@ body{
 }
 
 .page .main p.tips{
+    color: #ccc;
+}
+.page .main p.tips label{
     color: red;
 }
 .page .main .tips{

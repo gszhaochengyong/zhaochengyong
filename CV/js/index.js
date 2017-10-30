@@ -140,7 +140,7 @@ $(function(){
 		var left;//距离左边边距 
 		var distance=20;//离二边最小距离
 		
-		var timer=setInterval(tipsAnimate, 1000);
+		tips.timer=setInterval(tipsAnimate, 1000);
 		function tipsAnimate(){
 			console.log('111');
 			left=tips.offset().left;
@@ -157,6 +157,14 @@ $(function(){
 					5000);
 			}
 		}
+		tips.hover(function(){
+			tips.stop();
+			clearInterval(tips.timer);
+		},
+		function(){
+			// tips.css('left', '0');
+			// tips.timer=setInterval(tipsAnimate, 1000);
+		})
 	})();
 
 })
